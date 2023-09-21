@@ -5,7 +5,7 @@
 ## Alunos integrantes da equipe
 
 * Lucas Alkmim Barros
-* [Nome completo do aluno 2]
+* Fábio Antônio Caldeira Andrade
 * [Nome completo do aluno 3]
 * [Nome completo do aluno 4]
 
