@@ -1,9 +1,6 @@
 # Old Fashioned
 
-- A maioria dos idosos sente falta de produtos de moda adequados a eles quando vão às compras,
-boa parte deles se sentem excluídos quando se trata de tendências da moda atual.
-- Será criado um software que auxilia pessoas da terceira idade a encontrar,
-escolher e organizar roupas que mais os agrada, de forma simples e ágil.
+- Muitos idosos enfrentam dificuldades ao procurar produtos de moda que atendam às suas necessidades ao fazer compras. Frequentemente, eles se sentem deslocados em relação às tendências da moda atual e a falta de opções adequadas para a terceira idade. Para solucionar esse problema, estamos desenvolvendo um software inovador que ajudará as pessoas idosas a encontrar, selecionar e organizar roupas que se adaptem ao seu estilo e conforto de maneira fácil e eficiente
 
 ## Alunos integrantes da equipe
 
