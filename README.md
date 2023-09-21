@@ -1,6 +1,9 @@
 # Old Fashioned
 
-[Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.]
+- A maioria dos idosos sente falta de produtos de moda adequados a eles quando vão às compras,
+boa parte deles se sentem excluídos quando se trata de tendências da moda atual.
+- Será criado um software que auxilia pessoas da terceira idade a encontrar,
+escolher e organizar roupas que mais os agrada, de forma simples e ágil.
 
 ## Alunos integrantes da equipe
 
