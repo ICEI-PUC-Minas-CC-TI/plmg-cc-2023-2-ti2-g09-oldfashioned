@@ -64,6 +64,14 @@ nav ul li a {
   font-size: 18px;
 }
 
+nav ul li {
+  text-decoration:none;
+  color: #fa7f72;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
 .line {
   height: 1px;
   background-color: #ddd;

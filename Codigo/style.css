@@ -60,6 +60,14 @@ nav ul li a {
   align-items: center;
   font-size: 18px;
 }
+
+nav ul li {
+  text-decoration: none;
+  color: hsl(26, 100%, 55%);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
 .favoritos_button {
   text-decoration: none;
   color: black;

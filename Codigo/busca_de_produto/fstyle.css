@@ -91,6 +91,14 @@ nav ul li a{
 
 }
 
+nav ul li {
+    text-decoration:none;
+    color: #fa7f72;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
 #open_cart_btn{
     border:none;
     background-color:transparent;
@@ -300,6 +308,7 @@ button{
     color: #313131;
     margin-top: 0;
     padding: 25px;
+    z-index: 1;
   }
   
   .chat::before {
@@ -309,6 +318,8 @@ button{
     top: 0;
     height: 40%;
     width: 100%;
+    margin-top: 80px;
+    height: 10px;
     /*background: linear-gradient(to bottom, white 20%, rgba(255, 255, 255, 0)) repeat-x;*/
   }
   
@@ -862,7 +873,6 @@ main {
     text-align: center;
     align-items: center;
     display: none;
-    z-index: 1;
 }
 .janelaCriar button {
     margin-top: 20px;
