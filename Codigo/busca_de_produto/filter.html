@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="fapp.js"></script>
+    <link href="fstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+    <title>Filtro de Pesquisa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <header>
+      <div class="menu">
+          <div class="left-side-menu">
+
+              <div class="logo"><a href="../index.html" style="border: none;">
+                  <img class="logo2" src = "images/oldlogo2.png" height="58px">
+                  <img class="logo3" src = "images/oldlogo3.png" height="58px">
+                  <script>
+                      function returntohome() {
+                          window.location.href = "index.html";
+                      }
+                  </script>
+              </a>
+              </div>
+              <nav>
+                  <ul>
+                      <li> <a href="">Não importa a idade, estar<br> na moda é se sentir bem na<br> própria pele.</a></li>
+                      
+                  </ul>
+              </nav>
+          </div>
+          <div class="right-side-menu" id="rightsidemenu">
+              <a href="../favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
+
+              
+          </div>
+          
+      </div>
+      <div class="line"></div>
+  </header>
+
+    <div class="wrapper">
+      <div class="titulodebusca">
+      <h1>Busca por eventos</h1>
+      <h3>Converse com nossa assistente virtual para encontrar peças estilosas e atuais de acordo com seu evento!</h3>
+      <!--<button id="open_cart_btn" onclick=" openCart()"><img src="images/icon-cart.svg" alt=""></button>-->
+    </div>
+      <section class="chat">
+        <div class="chat__message chat__message_A">
+          <div class="chat__content">
+            <p>Para qual evento você deseja se vestir? 
+              Clique em uma resposta desejada.</p>
+          </div>
+        </div>
+    
+        <div class="chat__message chat__message_A">
+          <div class="chat__content">
+            <p>Prazer! Sou a assistente Esmeralda. <br>
+              Irei te ajudar a encontrar a roupa perfeita!</p>
+          </div>
+        </div>
+      </section>
+      
+        <div id="search-container" style="display: none;">
+            <input type="search" id="search-input" placeholder="Pesquisar..."/>
+            <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+            <div class="button-value filter-checkbox" onclick="filterProduct('tudo')">Tudo</div>
+            <div class="button-value filter-checkbox" onclick="filterProduct('calor')">Calor</div>
+            <div class="button-value filter-checkbox" onclick="filterProduct('frio')">Frio</div>
+            <div class="button-value filter-checkbox" onclick="filterProduct('casamento')">Casamento</div>
+            <div class="button-value filter-checkbox" onclick="filterProduct('casual')">Casual</div>
+            <div class="button-value filter-checkbox" onclick="filterProduct('formal')">Formal</div>
+        </div>
+        <div id="buttons">
+          <div class="button-value filter-checkbox" onclick="filterProduct('branco')">Branco</div>
+          <div class="button-value filter-checkbox" onclick="filterProduct('preto')">Preto</div>
+          <div class="button-value filter-checkbox" onclick="filterProduct('colorido')">Colorido</div>
+        </div>
+       
+        <div id="buttons">
+            <div class="button-value filter-checkbox" onclick="filterProduct('feminino')">Feminino</div>
+            <div class="button-value filter-checkbox" onclick="filterProduct('masculino')">Masculino</div>
+            
+        </div>
+        
+        <section class="chat">
+            <div class="chat__message chat__message_A">
+              <div class="chat__content">
+                <p>Aqui estão os resultados de sua busca!</p>
+              </div>
+            </div>
+        
+
+          </section>
+       
+        <div id="products"> </div>
+        
+  <!--backdrop-->
+  <div class="backdrop"></div>
+  <!--Side Cart-->
+  <div id="sidecart" class="sidecart">
+      <div class="cart_content">
+          <!--Cart Header-->
+          <div class="cart_header">
+              <img src="images/icon-cart.svg" alt="" style="width: 30px;">
+              <div class="header_title">
+                  <h2>Seu Carrinho</h2>
+                  <span id="items_num">0</span>
+              </div>
+              <span id="close_btn" class="close_btn">&times</span>
+          </div>
+          <!--Cart Items-->
+          <div class="cart_items">
+             
+          </div>
+          <!--Cart Actions-->
+          <div class="cart_actions">
+              <div class="subtotal">
+                  <p>Subtotal:</p>
+                  <p>$<span id="subtotal_price">0</span></p>
+              </div>
+              <button>View Cart</button>
+              <button>Checkout</button>
+
+          </div>
+      </div>
+  </div> 
+
+  
+
+    <script src="fapp.js"></script>
+
+</div>
+
+<footer>
+  <div class="container-footer">
+      <div class="row-footer">
+          <!-- footer col-->
+          <div class="footer-col">
+              <h4>Redes sociais</h4>
+              <div class="medias-socias">
+                  <ul>
+                      <div class="redecontainer">
+                          <li><a href="#" class="rede face"> <i class="fa fa-facebook"></i> <li><a href="#" class="redetitulo">Facebook</a></li></a></li>
+                      </div>
+                      <div class="redecontainer">
+                          <li><a href="#" class="rede tt"> <i class="fa fa-twitter"></i> <li><a href="#" class="redetitulo">Twitter</a></li></a></li>
+                      </div>
+                      <div class="redecontainer">
+                          <li><a href="#" class="rede insta"> <i class="fa fa-instagram"></i> <li><a href="#" class="redetitulo">Instagram</a></li></a></li>
+                      </div>
+                  </ul>
+             </div>
+              
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+              <h4>Sobre nós</h4>
+              <ul>
+                  <li><a href="#">Olá! Somos três estudantes de Ciência da Computação da Puc Minas que sonham em inovar na moda.</a></li>
+                  <li class="containerfoto"> <div class="cristo"><img src="iconsfooter/breno.jpeg" alt="" class="foto"><h6> Breno Pires </h6></div><div class="cristo soph" ><img src="iconsfooter/sophia.jpeg" alt="" class="foto"> <h6> Sophia Carrazza </h6> </div><div class="cristo"><img src="iconsfooter/brenda.jpeg" alt="" class="foto"><h6>Brenda Cristina</h6></div></li>
+              </ul>
+          </div>
+          <!--end footer col-->
+          <!-- footer col-->
+          <div class="footer-col">
+              <h4 style="margin-left: 40% ;">Inscreva-se em nosso newsletter!</h4>
+              <div class="form-sub">
+                  <form>
+                      <input type="email" placeholder="Digite o seu e-mail" required>
+                      <button>inscrever-se</button>
+                  </form>
+              </div>
+              <div class="old">
+                  <h5> Old Fashioned </h5>
+                  <h7> Estar na moda é se sentir bem na própria pele.</h7>
+                  </div>
+          <!--end footer col-->
+      </div>
+
+  </div>
+</footer>
+</body>
+</html>

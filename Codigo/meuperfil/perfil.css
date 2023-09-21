@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+.menu {
+  display: flex;
+  justify-content: space-between; /* da o maior espaco possivel entre os elementos filhos (left side e right side do menu)*/
+  padding: 0 5%;
+  height: 85px;
+  align-items: center;
+}
+
+.left-side-menu {
+  display: flex;
+  gap: 50px;
+}
+
+.right-side-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.right-side-menu button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#open_cart_btn img{
+  width: 40px;
+}
+.icon-cart img {
+  width: 0px;
+  margin-right: 10px;
+}
+
+.icon-avatar img {
+  width: 50px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: hsl(26, 100%, 55%);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.favoritos_button {
+  text-decoration: none;
+  color: black;
+  border-style: outset;
+  border-color: #f3b8b2;
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center; /* pra colocar align items e esses trem precisa ter display */
+  width: fit-content;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.line {
+  height: 1px;
+  background-color: #ddd;
+  width: 90%;
+  align-self: center;
+}
+.logo3{
+    display: none;
+}
+.container{
+    display: flex;
+    gap: 15rem;
+    justify-content: center;
+    font-size: 1.9rem;
+    margin-top: 3rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.right div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+#fotoperfil img{
+    max-width: 600px;
+    max-height: 600px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+}
+
+.left button{
+    border-radius: 20rem;
+    width: 15rem;
+    height: 6rem;
+    font-size: 35px;
+    cursor: pointer;
+    border: 1px solid black;
+
+}
+.left button:hover{
+    transition: 0.4s;
+    background-color: hsl(26, 100%, 55%);
+}
+
+footer {
+    background-color: beige;
+    padding: 50px 0;
+  }
+  .container-footer {
+    max-width: 1400px;
+    padding: 0 4%;
+    margin: auto;
+  }
+  .row-footer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .footer-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+  .footer-col h4 {
+    margin-left: 25%;
+    font-size: 22px;
+    color: black;
+    margin-bottom: 20px;
+    font-weight: 500;
+    position: relative;
+    text-transform: uppercase;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col ul li {
+    margin-left: 20%;
+    margin: 10px 0;
+  }
+  .footer-col ul li a {
+    justify-content: center;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    margin-left: 20%;
+    color: black;
+    padding-left: 10px;
+  }
+  .footer-col .medias-socias {
+    margin-left: 6%;
+    margin-top: 30px;
+  }
+  .rede {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px 10px 0;
+    text-decoration: none;
+    border-radius: 50%;
+    color: black;
+    border: 1px solid beige;
+  }
+  .face {
+    background-image: url(images/facebook.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .tt {
+    background-image: url(images/twitter.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .insta {
+    background-image: url(images/instagram.png);
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .footer-col .medias-socias a i {
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  
+  .rede :hover {
+    color: black;
+    margin-left: 20%;
+    background-color: beige;
+  }
+  .footer-col .form-sub input {
+    margin-left: 40%;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid beige;
+    color: whitesmoke;
+    background-color: rgb(219, 191, 138);
+  }
+  .footer-col .form-sub input::placeholder {
+    margin-left: 40%;
+    color: white;
+  }
+  .footer-col .form-sub button {
+    margin-left: 40%;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: white;
+  }
+  .redecontainer {
+    display: flex;
+  }
+  .redetitulo {
+    margin-top: 10%;
+  }
+  .old {
+    margin-top: 30px;
+    margin-left: 40%;
+    width: 100%;
+  }
+  .foto {
+    width: 3rem;
+    border-radius: 50%;
+  }
+  .containerfoto {
+    display: flex;
+    gap: 5%;
+    justify-content: space-between;
+  }
+  .ajuda {
+    display: flex;
+    justify-content: space-between;
+    gap: 260%;
+  }
+  .jesus {
+    margin: 20px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: black;
+    border-style: outset;
+    padding: 20px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 25px;
+    font-size: 30px;
+    font-weight: 700;
+    align-self: center;
+    border: none;
+  }
+  .soph {
+    margin-left: 8%;
+  }
+
+  main{
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+
+@media(max-width:1024px){
+    .container{
+        gap: 8rem;
+        margin-left: 30rem;
+    }
+
+    #left img{
+        width: 800px;
+        height: 800px;
+    }
+     .menu{
+        display: flex;
+        justify-content: space-between; /* da o maior espaco possivel entre os elementos filhos (left side e right side do menu)*/
+        padding: 5%;
+        height:85px;
+        align-items: center;
+        margin-top: 45px;
+        width: 150%;
+      
+    }
+     .logo2 {
+        display:none;
+    }
+     .logo3 {
+        display:block;
+        margin: 0%;
+    }
+  
+    nav ul li a{
+        display: none;
+        
+    
+    }
+    .line2 {
+        display: inline-block;
+    }
+  
+    .favoritos_button{
+        display: none;
+    }
+    footer{
+      width: 150%;
+    }
+}
+@media(max-width:768px){
+    .container{
+        gap: 8rem;
+        margin-left: 8rem;
+    }
+    .menu{
+        width: 150%;
+    }
+    #left{
+        margin: 0;
+    }
+    #left img{
+        width: 600px;
+        height: 600px;
+        margin-left: 18rem;
+    }
+    #left button{
+        margin-left: 18rem;
+    }
+}
+@media(max-width:425px){
+    .container{
+        gap: 4rem;
+    }
+    .logo3{
+        width: 150px;
+        height: 100px;
+    }
+    .menu{
+        width: 100%;
+        gap: 45rem;
+    }
+    .right-side-menu img{
+        width: 120px;
+    }
+    .container{
+        margin-top: 10rem;
+    }
+    #left{
+        margin: 0;
+        margin-left: 22rem;
+    }
+    .right{
+        font-size: 50px ;
+    }
+    #left img{
+        width: 600px;
+        height: 600px;
+    }
+    #left button{
+        margin-left: 18rem;
+    }
+}
+@media(max-width:375px){
+    .container{
+        margin-left: 12rem;
+    }
+}

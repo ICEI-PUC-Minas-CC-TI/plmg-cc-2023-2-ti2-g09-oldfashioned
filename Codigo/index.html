@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Old Fashioned</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/4ac5c9f100.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="script.js" defer></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <div class="left-side-menu">
+            <a href="index.html" class="logo">
+                <img class="logo2" src = "images/oldlogo2.png" height="58px">
+                <img class="logo3" src = "images/oldlogo3.png" height="58px">
+            </a>
+            <nav>
+                <ul>
+                    <li> <a href="">Não importa a idade, estar<br> na moda é se sentir bem na<br> própria pele.</a></li>
+      
+                </ul>
+            </nav>
+        </div>
+        <div class="right-side-menu" id="rightsidemenu">
+            <a href="/favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
+            
+
+      
+        </div>
+        
+        </div>
+        <div class="line"></div>
+    </header>
+    <h1 class="msgprincipal">
+      A Old Fashioned foi criada para você se encontrar na moda atual, porque
+      independentemente da idade, o importante é se sentir bem na própria pele.
+    </h1>
+    <div class="containersup">
+      <div class="menu1">
+        <div>
+          <h3 class="menu1title">
+            Descubra dicas,inspirações e ideias para seu estilo sênior no
+            conforto de sua casa.
+          </h3>
+        </div>
+        <script src="app.js"></script>
+<div class="pesquisarapida">
+<div class="leftsidepesquisa">
+  <h3>Pesquisa por eventos</h3>
+  <button class="opentest" id="opentest" onclick="redirecionar()">Comece aqui</button>
+</div>
+
+<div class="rightsidepesquisa">
+    <h3>Pesquisa rápida</h3>
+    <section class="container1">
+      <form>
+          <i class="fas fa-search"></i>
+          <input type="text" name="" id="search-item" placeholder="Pesquise por um produto"
+           onkeyup="search()">
+      </form>
+
+      <div class="product-list" id="product-list">
+      </div>
+
+  </section>
+    
+      </button>
+    </form>
+  
+</div>
+    
+</div>   
+    
+      </div>
+      <div class="menu2">
+        <h3 class="menu1title">Entre em uma conta existente ou crie uma</h3>
+        <div class="contas">
+          <div class="criarconta">
+            <a href="signup/signup.html">
+              <div class="criarflex">
+                <h4 class="criarcontatitle">Crie uma nova conta</h4>
+                <img
+                  src="images/pessoalaranja.png"
+                  alt=""
+                  class="criarcontaimg"
+                />
+              </div>
+            </a>
+          </div>
+          <div class="entrarconta">
+            <a href="login/login.html">
+              <div class="entrarflex">
+                <h4 class="entrarcontatitle">Entrar em uma conta existente</h4>
+                <img
+                  src="images/setalaranja.png"
+                  alt=""
+                  class="entrarcontaimg"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu3">
+        <a href="/busca_de_produto/cores.html">
+          <div class="colorflex">
+            <h3 class="menu1title">
+              Aprenda como as cores influenciam sua imagem
+            </h3>
+            <img src="images/circulocrom.png" alt="" class="cromcircle" />
+          </div>
+        </a>
+      </div>
+    </div>
+    <h2 class="trendstitle">Todas as peças</h2>
+    
+          <div id="products">
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Selecione a pasta</h3>
+                <select id="selectPastas">
+                  <div id="pastasModal"></div>
+                  <!-- Opções de pastas -->
+                </select>
+                <button id="btnSalvarPasta" >Salvar</button>
+              </div>
+            </div>
+            
+          </div>
+
+    </div>
+
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <div class="medias-socias">
+                        <ul>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede face"> <i class="fa fa-facebook"></i> <li><a href="#" class="redetitulo">Facebook</a></li></a></li>
+                            </div>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede tt"> <i class="fa fa-twitter"></i> <li><a href="#" class="redetitulo">Twitter</a></li></a></li>
+                            </div>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede insta"> <i class="fa fa-instagram"></i> <li><a href="#" class="redetitulo">Instagram</a></li></a></li>
+                            </div>
+                        </ul>
+                   </div>
+                    
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Sobre nós</h4>
+                    <ul>
+                        <li><a href="#">Olá! Somos três estudantes de Ciência da Computação da Puc Minas que sonham em inovar na moda.</a></li>
+                        <li class="containerfoto"> <div class="cristo"><img src="iconsfooter/breno.jpeg" alt="" class="foto"><h6> Breno Pires </h6></div><div class="cristo soph" ><img src="iconsfooter/sophia.jpeg" alt="" class="foto"> <h6> Sophia Carrazza </h6> </div><div class="cristo"><img src="iconsfooter/brenda.jpeg" alt="" class="foto"><h6>Brenda Cristina</h6></div></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4 style="margin-left: 40% ;">Inscreva-se em nosso newsletter!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>inscrever-se</button>
+                        </form>
+                    </div>
+                    <div class="old">
+                        <h5> Old Fashioned </h5>
+                        <h7> Estar na moda é se sentir bem na própria pele.</h7>
+                        </div>
+                <!--end footer col-->
+            </div>
+            <div class="ajuda">
+                <h6 style="margin-top: 10% ;"> All rights reserved </h6>
+                <div><a class="jesus" href="" class="suporte" ><h6>Ajuda e suporte</h6><img height= "30px" src="iconsfooter/ajuda.png" alt=""></a></div></div>
+    </div>
+        </div>
+    </footer>
+        
+    
+
+
+  </body>
+</html>

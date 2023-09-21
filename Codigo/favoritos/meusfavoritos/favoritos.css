@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+*{
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+
+ }
+.menu{
+    display: flex;
+    justify-content: space-between; /* da o maior espaco possivel entre os elementos filhos (left side e right side do menu)*/
+    padding: 0 5%;
+    height:85px;
+    align-items: center;
+}
+
+.left-side-menu{
+    display:flex;
+    gap:50px;
+}
+
+.right-side-menu{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.logo3 {
+    display: none;
+}
+#open_cart_btn {
+    border: none;
+    background-color: transparent;
+}
+#open_cart_btn img{
+    width:30px;
+    margin-right: 10px;
+}
+
+.icon-avatar img{
+    width:50px;
+}
+.favoritos_button{
+    text-decoration: none;
+    color: black;
+    border-style:outset;
+    border-color: #f3b8b2;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* pra colocar align items e esses trem precisa ter display */
+    width: fit-content;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+nav ul li{
+    display:inline-block;
+    margin-right: 30px;
+    
+}
+
+nav ul li a{
+    text-decoration:none;
+    color: #fa7f72;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+}
+
+.line{
+    height:1px;
+    background-color: beige;
+    width: 90%;
+    align-self: center;
+}
+
+/* ------------------- */
+button:hover{
+    opacity: 0.8;
+}
+body{
+    min-height: 100vh;
+    overflow-x:hidden;
+}
+.titulo{
+    margin-top: 30px;
+    margin-left: 3%;
+    
+}
+.card img{
+    align-self: center;
+    width: 90%;
+    height: 90%;
+    padding: 1%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card h5{
+    font-weight: 700;
+}
+.btn{
+    text-decoration: none;
+    color: rgb(5, 5, 5);
+    background-color:#fa7f72;
+    border: none;
+    padding: 10px 15px;
+    display: flex;
+    align-self: center;
+    width: fit-content;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+/* ------------------- */
+
+/* Items */
+.items{
+    padding: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem 10rem;
+    border-radius: 20px;
+
+}
+
+.items .item{
+    width: 185px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(184, 175, 175, 0.5);
+
+}
+
+.items .item img{
+    width: 100%;
+    margin: 0;
+}
+.items .item .btn2{
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    padding: 5px;
+    background-color:  rgb(219, 191, 138);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+}
+.btnimg {
+    padding: 5px;
+    height: 35px;
+}
+/* ------------------- */
+@media only screen and (min-width:320px) and (max-width: 1024px) {
+    *{
+        margin: 1%;
+        box-sizing:border-box;
+        font-family: "Kumbh Sans", sans-serif;
+     }
+     .menu{
+        display: flex;
+        justify-content: space-between; /* da o maior espaco possivel entre os elementos filhos (left side e right side do menu)*/
+        padding: 5%;
+        height:85px;
+        align-items: center;
+        margin-top: 45px;
+      
+    }
+     .logo2 {
+        display:none;
+    }
+     .logo3 {
+        display:block;
+        margin: 0%;
+    }
+
+    nav ul li a{
+        display: none;
+        
+    
+    }
+    .favoritos_button{
+        display: none;
+    }
+}
+.titulo {
+    background-color: beige;
+    font-weight: 650;
+    height: 25%;
+    padding: 3%;
+    margin-left: 0;
+    margin-top: 0;
+}
+.titulo h1 {
+    font-weight: 650;
+}
+.produto {
+    display:inline-flex;
+    gap: 6px;
+    font-weight: 600;
+}
+.produto p {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+

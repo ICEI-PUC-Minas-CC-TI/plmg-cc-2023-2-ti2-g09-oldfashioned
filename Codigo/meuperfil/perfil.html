@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="perfil.css">
+    <script
+    src="https://kit.fontawesome.com/4ac5c9f100.js"
+    crossorigin="anonymous"
+  ></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+<body>
+    <header>
+        <div class="menu">
+          <div class="left-side-menu">
+              <div class="logo">
+                  <a href="../index.html">
+                      <img class="logo2" src = "images/oldlogo2.png" height="58px">
+                      <img class="logo3" src = "images/oldlogo3.png" height="58px">
+                  </a>
+              </div>
+              <nav>
+                  <ul>
+                      <li> <a href="">Não importa a idade, estar<br> na moda é se sentir bem na<br> própria pele.</a></li>
+        
+                  </ul>
+              </nav>
+          </div>
+          <div class="right-side-menu" id="rightsidemenu">
+              <a href="../favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
+
+
+        
+          </div>
+          
+          </div>
+          <div class="line"></div>
+      </header>
+      <main class="container">
+        <div class="left" id="left">
+            <h1>Sua conta</h1>
+            <div id="fotoperfil"></div>
+            <button id="editarBtn">Editar</button>
+            <div id="btnSalvarContainer"></div>
+        </div>
+        <div class="right">
+            <div class="divusuario">
+                <label for="nomeusuario">Nome: </label>
+                <p id="usuarionome">a</p>
+            </div>
+            <div class="divemail">
+                <label for="emailusuario">E-mail: </label>
+                <p id="emailusuario"></p>
+            </div>
+            <div class="dividade">
+                <label for="idadeusuario">Idade: </label>
+                <p id="idadeusuario"></p>
+            </div>
+            <div class="divgender">
+                <label for="generousuario">Gênero: </label>
+                <p id="generousuario"></p>
+            </div>
+            <div class="divdesc">
+                <label for="descusuario">Descrição: </label>
+                <p id="descusuario"></p>
+            </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <div class="medias-socias">
+                        <ul>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede face"> <i class="fa fa-facebook"></i> <li><a href="#" class="redetitulo">Facebook</a></li></a></li>
+                            </div>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede tt"> <i class="fa fa-twitter"></i> <li><a href="#" class="redetitulo">Twitter</a></li></a></li>
+                            </div>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede insta"> <i class="fa fa-instagram"></i> <li><a href="#" class="redetitulo">Instagram</a></li></a></li>
+                            </div>
+                        </ul>
+                   </div>
+                    
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Sobre nós</h4>
+                    <ul>
+                        <li><a href="#">Olá! Somos três estudantes de Ciência da Computação da Puc Minas que sonham em inovar na moda.</a></li>
+                        <li class="containerfoto"> <div class="cristo"><img src="iconsfooter/breno.jpeg" alt="" class="foto"><h6> Breno Pires </h6></div><div class="cristo soph" ><img src="iconsfooter/sophia.jpeg" alt="" class="foto"> <h6> Sophia Carrazza </h6> </div><div class="cristo"><img src="iconsfooter/brenda.jpeg" alt="" class="foto"><h6>Brenda Cristina</h6></div></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4 style="margin-left: 40% ;">Inscreva-se em nosso newsletter!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>inscrever-se</button>
+                        </form>
+                    </div>
+                    <div class="old">
+                        <h5> Old Fashioned </h5>
+                        <h7> Estar na moda é se sentir bem na própria pele.</h7>
+                        </div>
+                <!--end footer col-->
+            </div>
+            <div class="ajuda">
+                <h6 style="margin-top: 10% ;"> All rights reserved </h6>
+                <div><a class="jesus" href="" class="suporte" ><h6>Ajuda e suporte</h6><img height= "30px" src="iconsfooter/ajuda.png" alt=""></a></div></div>
+    </div>
+        </div>
+    </footer>
+        
+
+
+      <script>
+        
+
+
+          let userValid = {
+    nome: '',
+    user: '',
+    senha: ''
+  }
+         if (localStorage.getItem('listaUser')) {
+            listaUser = JSON.parse(localStorage.getItem('listaUser'))
+            listaUser.forEach((item) => {
+      userValid = {
+         nome: item.nomeCad,
+         user: item.userCad,
+         senha: item.senhaCad,
+         email: item.emailCad,
+         idade: item.idadeCad,
+         descricao: item.descCad,
+         genero: item.generoCad,
+       } 
+  })
+        document.getElementById("usuarionome").innerHTML = userValid.nome;
+        document.getElementById("emailusuario").innerHTML = userValid.email;
+        document.getElementById("idadeusuario").innerHTML = userValid.idade;
+        document.getElementById("generousuario").innerHTML = userValid.genero;
+        document.getElementById("descusuario").innerHTML = userValid.descricao;
+
+        } else {
+            // Caso não haja um objeto no localStorage
+            document.getElementById('usuarionome');textContent = 'Nenhum nome armazenado';
+        }
+        
+        const url = localStorage.getItem('image');
+// Get data URL from localStorage
+var div = document.getElementById('fotoperfil');
+const img = new Image();
+img.src = url;
+div.appendChild(img);
+
+// Função para salvar os dados do usuário no armazenamento local
+function salvarDadosUsuario(userValid) {
+  localStorage.setItem("usuario", JSON.stringify(userValid));
+}
+
+// Função para carregar os dados do usuário do armazenamento local
+function carregarDadosUsuario() {
+  var userValid = localStorage.getItem("usuario");
+  if (userValid) {
+    userValid = JSON.parse(userValid);
+    document.getElementById("usuarionome").innerHTML = userValid.nome;
+    document.getElementById("emailusuario").innerHTML = userValid.email;
+    document.getElementById("idadeusuario").innerHTML = userValid.idade;
+    document.getElementById("generousuario").innerHTML = userValid.genero;
+    document.getElementById("descusuario").innerHTML = userValid.descricao;
+  }
+}
+
+// Adiciona um manipulador de evento ao botão "editarBtn"
+document.getElementById("editarBtn").addEventListener("click", function() {
+  // Obtém os elementos do usuário
+  var nomeUsuario = document.getElementById("usuarionome");
+  var emailUsuario = document.getElementById("emailusuario");
+  var idadeUsuario = document.getElementById("idadeusuario");
+  var generoUsuario = document.getElementById("generousuario");
+  var descUsuario = document.getElementById("descusuario");
+
+  // Cria elementos de input para editar os valores
+  var inputNome = document.createElement("input");
+  inputNome.value = nomeUsuario.innerHTML;
+
+  var inputEmail = document.createElement("input");
+  inputEmail.value = emailUsuario.innerHTML;
+
+  var inputIdade = document.createElement("input");
+  inputIdade.value = idadeUsuario.innerHTML;
+
+  var inputGenero = document.createElement("input");
+  inputGenero.value = generoUsuario.innerHTML;
+
+  var inputDesc = document.createElement("input");
+  inputDesc.value = descUsuario.innerHTML;
+
+  // Substitui os elementos originais pelos inputs
+  nomeUsuario.innerHTML = "";
+  nomeUsuario.appendChild(inputNome);
+
+  emailUsuario.innerHTML = "";
+  emailUsuario.appendChild(inputEmail);
+
+  idadeUsuario.innerHTML = "";
+  idadeUsuario.appendChild(inputIdade);
+
+  generoUsuario.innerHTML = "";
+  generoUsuario.appendChild(inputGenero);
+
+  descUsuario.innerHTML = "";
+  descUsuario.appendChild(inputDesc);
+
+  // Cria o botão "Salvar" dentro da div "btnSalvarContainer"
+  var btnSalvar = document.createElement("button");
+  btnSalvar.innerHTML = "Salvar";
+  btnSalvar.addEventListener("click", function() {
+    // Atualiza os valores do usuário com os inputs editados
+    var userValid = {
+      nome: inputNome.value,
+      email: inputEmail.value,
+      idade: inputIdade.value,
+      genero: inputGenero.value,
+      descricao: inputDesc.value
+    };
+
+    // Salva os dados do usuário no armazenamento local
+    salvarDadosUsuario(userValid);
+
+    // Atualiza os elementos do usuário com os valores editados
+    nomeUsuario.innerHTML = userValid.nome;
+    emailUsuario.innerHTML = userValid.email;
+    idadeUsuario.innerHTML = userValid.idade;
+    generoUsuario.innerHTML = userValid.genero;
+    descUsuario.innerHTML = userValid.descricao;
+
+    // Remove o botão "Salvar"
+    btnSalvar.remove();
+  });
+
+  document.getElementById("btnSalvarContainer").innerHTML = "";
+  document.getElementById("btnSalvarContainer").appendChild(btnSalvar);
+});
+
+// Carrega os dados do usuário quando a página é carregada
+carregarDadosUsuario();
+
+
+// Set URL as src of image and append to DOM
+
+      </script>
+
+</body>
+
+</html>

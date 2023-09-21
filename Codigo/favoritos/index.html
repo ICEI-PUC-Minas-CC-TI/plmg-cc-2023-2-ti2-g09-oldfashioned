@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus favoritos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="left-side-menu">
+                <a href="../index.html" class="logo">
+                    <img src = "images/oldlogo2.jpg" height="58px">
+                </a>
+                <nav>
+                    <ul>
+                        <li> <a href="" class="slogan">Não importa a idade, estar<br> na moda é se sentir bem na<br> própria pele.</a></li>
+        
+                    </ul>
+                </nav>
+            </div>
+            <div class="right-side-menu" id="rightsidemenu">
+                <a href="../favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt="" class="favfav"></a>
+
+            </div>
+        
+        </div>
+    </header>
+        <div class="lookssalvos">
+            <h1 class="looks">
+                Peças favoritas - Suas pastas
+            </h1>
+            <h4>
+                Clique na pasta desejada para visualizá-la
+            </h4>
+        </div>
+        <div class="janelaCriar" id="janelaCriar"> 
+            <h1> Criar Pasta </h1>
+            <label for="" id="labelnome">Nome da pasta:</label>
+            <input type="text" id="nome" placeholder="Digite aqui...">
+            <label for="">Selecione uma capa:</label>
+            <input type="file" id="inputImagem" accept="image/*">
+            <button id="botaoCriar" onclick="CriarNovaLista()">Criar</button>
+        </div>
+    <main>
+            <div class= listasnew id="containerlist">
+                <div class=" lista" id="criarlista" onclick="AbrirJanelaCriação()">
+                    <div class="item" id="listanova">
+                        <div class="brendinha"> Crie uma pasta </div>
+                        <img src="images/image-product-1-thumbnail.jpg" alt="" class="imglist"></div>
+                </div>
+                <div class=" lista">
+                    <div class="item">
+                        <div><a href="allpins/peçassalvas.html" class="button">Todos os favoritos</a></div>
+                        <img src="images/image-product-1-thumbnail.jpg" alt="" class="imglist">
+                    </div>
+                </div>
+                <div class=" lista">
+                    <div class="item"><div><a href="meusfavoritos/favoritos.html" class="button" >Pasta 1</a></div>
+                    <img src="images/image-product-1-thumbnail.jpg" alt="" class="imglist"></div>
+                </div>
+                <div class=" lista">
+                    <div class="item"><div><a href="meusfavoritos/favoritos.html" class="button" >Pasta 2</a></div>
+                    <img src="images/image-product-1-thumbnail.jpg" alt="" class="imglist"></div>
+                </div>
+                <div class=" lista">
+                    <div class="item"><div><a href="meusfavoritos/favoritos.html" class="button" >Pasta 3</a></div>
+                    <img src="images/image-product-1-thumbnail.jpg" alt="" class="imglist"></div>
+                </div>
+                <div class=" lista">
+                    <div class="item"><div><a href="meusfavoritos/favoritos.html" class="button" >Pasta 4</a></div>
+                    <img src="images/image-product-1-thumbnail.jpg" alt="" class="imglist"></div>
+                </div>
+                
+            </div>
+            <div id="divListas"></div>
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="row-footer">
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <div class="medias-socias">
+                        <ul>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede face"> <i class="fa fa-facebook"></i> <li><a href="#" class="redetitulo">Facebook</a></li></a></li>
+                            </div>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede tt"> <i class="fa fa-twitter"></i> <li><a href="#" class="redetitulo">Twitter</a></li></a></li>
+                            </div>
+                            <div class="redecontainer">
+                                <li><a href="#" class="rede insta"> <i class="fa fa-instagram"></i> <li><a href="#" class="redetitulo">Instagram</a></li></a></li>
+                            </div>
+                        </ul>
+                   </div>
+                    
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col">
+                    <h4>Sobre nós</h4>
+                    <ul>
+                        <li><a href="#">Olá! Somos três estudantes de Ciência da Computação da Puc Minas que sonham em inovar na moda.</a></li>
+                        <li class="containerfoto"> <div class="cristo"><img src="images/breno.png" alt="" class="foto"><h6> Breno Pires </h6></div><div class="cristo soph" ><img src="images/sophia.png" alt="" class="foto"> <h6> Sophia Carrazza </h6> </div><div class="cristo"><img src="images/brenda.png" alt="" class="foto"><h6>Brenda Cristina</h6></div></li>
+                    </ul>
+                </div>
+                <!--end footer col-->
+                <!-- footer col-->
+                <div class="footer-col newltr">
+                    <h4 style="margin-left: 40% ;">Inscreva-se em nosso newsletter!</h4>
+                    <div class="form-sub">
+                        <form>
+                            <input type="email" placeholder="Digite o seu e-mail" required>
+                            <button>inscrever-se</button>
+                        </form>
+                    </div>
+                    <div class="old">
+                        <h5> Old Fashioned </h5>
+                        <h7> Estar na moda é se sentir bem na própria pele.</h7>
+                        </div>
+                <!--end footer col-->
+            </div>
+            <div class="ajuda">
+                <h6 style="margin-top: 10% ;"> All rights reserved </h6>
+                <div><a class="jesus" href="" class="suporte" ><h6>Ajuda e suporte</h6><img height= "30px" src="images/ajuda.png" alt=""></a></div></div>
+    </div>
+        </div>
+    </footer>
+    <script>
+
+if (localStorage.getItem('userLogado')) {
+  var userValid = JSON.parse(localStorage.getItem('userLogado'));
+
+  // Criar o ícone do perfil
+  var novoLink = document.createElement("a");
+  novoLink.setAttribute("href", "/meuperfil/perfil.html");
+  var perfilIcon = document.createElement("img");
+  const url = localStorage.getItem('image');
+  const img = new Image();
+  img.classList.add("fotodperfil");
+  img.src = url;
+  novoLink.appendChild(img);
+
+  // Adicionar o ícone do perfil ao elemento HTML desejado
+  var perfilIconContainer = document.getElementById("rightsidemenu");
+  perfilIconContainer.appendChild(novoLink);
+
+
+}
+
+        const divListas = document.getElementById('containerlist');
+
+        var criar = window.document.getElementById('criarlista');
+
+        function AbrirJanelaCriação(){
+            const telaCriar = document.getElementById('janelaCriar');
+            telaCriar.style.display = 'flex';
+        }
+        let nome = document.querySelector('#nome')
+        let labelnome = document.querySelector('#labelnome')
+        let validnome = false
+        nome.addEventListener('keyup', () => {
+            if(nome.value.length >= 15){
+                labelnome.setAttribute('style', 'color:red')
+                labelnome.innerHTML = 'Insira no maximo 15 caracteres'
+                nome.setAttribute('style', 'border-color:red')
+                validnome = false
+            } else {
+                labelnome.setAttribute('style', 'color: green')
+                labelnome.innerHTML= 'Nome da lista:'
+                nome.setAttribute('style', 'border-color: green')
+                validnome = true
+            }
+        })
+
+        function exibirPastas() {
+  var divListas = document.getElementById('divListas');
+  divListas.innerHTML = '';
+
+  var pastas = JSON.parse(localStorage.getItem('pastas')) || [];
+
+  pastas.forEach(function(pasta) {
+    if (pasta.nome) {
+      var novaLista = document.createElement('div');
+      novaLista.classList.add('lista');
+
+      var novoItem = document.createElement('div');
+      novoItem.classList.add('item');
+
+      var novaDiv = document.createElement('div');
+      var novoLink = document.createElement('a');
+      novoLink.href = 'meusfavoritos/favoritos.html?id=' + pasta.id;
+      novoLink.classList.add('button');
+      novoLink.textContent = pasta.nome;
+
+      novaDiv.appendChild(novoLink);
+      novoItem.appendChild(novaDiv);
+      novaLista.appendChild(novoItem);
+      divListas.appendChild(novaLista);
+
+      if (pasta.foto && pasta.foto.startsWith('data:image/')) {
+        var novaImagem = document.createElement('img');
+        novaImagem.src = pasta.foto;
+        novaImagem.classList.add('imglist');
+        novoItem.appendChild(novaImagem);
+      }
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  exibirPastas();
+});
+
+function generateUniqueId() {
+  var timestamp = Date.now().toString();
+  var randomNum = Math.floor(Math.random() * 1000).toString();
+  return timestamp + randomNum;
+}
+
+function CriarNovaLista() {
+  var telaCriar = document.getElementById('janelaCriar');
+  telaCriar.style.display = 'none';
+
+  var nomeLista = document.getElementById('nome');
+  var inputImagem = document.getElementById('inputImagem');
+
+  var novaLista = document.createElement('div');
+  novaLista.classList.add('lista');
+  var novoItem = document.createElement('div');
+  novoItem.classList.add('item');
+  novaLista.appendChild(novoItem);
+  var novaDiv = document.createElement('div');
+  var novoLink = document.createElement('a');
+  novoLink.href = 'meusfavoritos/favoritos.html';
+  novoLink.classList.add('button');
+  novoLink.textContent = nomeLista.value;
+
+  novaDiv.appendChild(novoLink);
+  novoItem.appendChild(novaDiv);
+  divListas.appendChild(novaLista);
+
+  const arquivo = inputImagem.files[0];
+  if (arquivo && arquivo.type.startsWith('image/')) {
+    const newimg = document.createElement('img');
+    newimg.classList.add('imglist');
+    novoItem.appendChild(newimg);
+
+    // Ler o arquivo de imagem como URL
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      newimg.src = e.target.result;
+    };
+    reader.readAsDataURL(arquivo);
+  }
+
+  // Adicionar a pasta ao array de pastas
+  var pastas = JSON.parse(localStorage.getItem('pastas')) || [];
+  var novaPasta = {
+    id: generateUniqueId(), // Gerar um ID único para a pasta
+    nome: nomeLista.value,
+    foto: arquivo ? '' : null // Armazenar a foto como null se não houver arquivo selecionado
+  };
+  pastas.push(novaPasta);
+
+  // Salvar as pastas no localStorage
+  localStorage.setItem('pastas', JSON.stringify(pastas));
+}
+</script>
+</body>
+</html>

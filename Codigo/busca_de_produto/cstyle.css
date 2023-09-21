@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+*{
+   
+   margin: 0;
+   padding: 0;
+   box-sizing:border-box;
+   font-family: "Kumbh Sans", sans-serif;
+   
+}
+
+body{
+    min-height: 100vh;
+    overflow-x:hidden;
+    padding: 2%;
+}
+
+/*parte do navbar*/
+header{
+    display:flex;
+    flex-direction: column;
+ }
+.menu{
+    display: flex;
+    justify-content: space-between; /* da o maior espaco possivel entre os elementos filhos (left side e right side do menu)*/
+    padding: 0 5%;
+    height:85px;
+    align-items: center;
+}
+
+.left-side-menu{
+    display:flex;
+    gap:50px;
+}
+.fotodperfil{
+    width: 50px;
+    border-radius: 5rem;
+    height: 50px;
+  }
+.right-side-menu{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+.logo3 {
+    display: none;
+}
+
+.icon-avatar img{
+    width:50px;
+}
+.favoritos_button{
+    text-decoration: none;
+    color: black;
+    border-style:outset;
+    border-color: #f3b8b2;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* pra colocar align items e esses trem precisa ter display */
+    width: fit-content;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 700;
+}
+nav ul li{
+    display:inline-block;
+    margin-right: 30px;
+    
+}
+
+nav ul li a{
+    text-decoration:none;
+    color: #fa7f72;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+
+}
+
+.line{
+    height:1px;
+    background-color: #ddd;
+    width: 90%;
+    align-self: center;
+}
+.line2 {
+    height:1px;
+    background-color: #b4b2b2;
+    width: 90%;
+    align-self: center;
+    display:none
+}
+
+.main-home{
+    background-image: url(images/colorwheel.jpg);
+    height: 100%;
+    width: 99%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: calc(100% - 5%);
+    overflow: hidden;
+    transition: ease-in .4s;
+}
+.main-home img{
+    opacity: 100%;
+}
+.homeinner{
+    margin-top: 6%;
+    margin-left: 3%;
+}
+.container{
+    display: block;
+    width: 100%;
+    height: calc(100vh-85px);
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+
+}
+.wrapper1{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    margin-bottom: 6%;
+}
+.textocores{
+    padding: 13px;
+    border: 1px solid #c0c0c0;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 2%;
+    max-width: 450px;
+    background-color: #ffffff7a;
+}
+.imagemcores{
+    padding: 13px;
+    border: 1px solid #c0c0c0;
+    border-radius: 15px;
+    margin-bottom: 2%;
+    max-width: 600px;
+    background-color: #fff;
+}
+.imagemcores img{
+    width: 310px;
+}
+
+.wrapper2 h2{
+    font-size: 1.6rem;
+    font-weight: 600;
+    
+}
+.textwrapper2{
+    margin-left: 2%;
+    
+    max-width: 90%;
+    height: 100%;
+    margin-bottom: 1%;
+}
+.wrapper2 p{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.cards{
+    display: inline-flex;
+    width: fit-content;
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 3%;
+    border: 1px solid #c0c0c0;
+    border-radius: 25px;
+    padding: 20px;
+}
+.card{
+    width: fit-content;
+    padding: 10px;
+    display: inline-flex;
+    border: 1px solid #c0c0c0;
+    border-radius: 15px;
+    gap: 1%;
+}
+.card img{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    border-color: none;
+    border-radius: 14%;
+}
+.cardbranco img{
+    border: 2px solid #c0c0c0;
+}
+.card h3{
+    max-width: 800px;
+    margin-top: 25px;
+}
+.card p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    max-width: 800px;
+    margin-top: 25px;
+}
+
+@media only screen and (min-width:320px) and (max-width: 1024px) {
+    *{
+        margin: 1%;
+        box-sizing:border-box;
+        font-family: "Kumbh Sans", sans-serif;
+        margin-top: 0;
+     }
+     .menu{
+        display: flex;
+        justify-content: space-between; /* da o maior espaco possivel entre os elementos filhos (left side e right side do menu)*/
+        padding: 5%;
+        height:85px;
+        align-items: center;
+        margin-top: 45px;
+      
+    }
+     .logo2 {
+        display:none;
+    }
+     .logo3 {
+        display:block;
+        margin: 0%;
+    }
+
+    nav ul li a{
+        display: none;
+        
+    
+    }
+    .line2 {
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 920px){
+    .container{
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .cards{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+       gap: 30px;
+       
+       
+    }
+    .wrapper2{
+        margin: 0;
+        margin-right: 0;
+        width: 98%;
+        max-width: 100%;
+        left: 0;
+        right: 0;
+        
+    }
+    .textwrapper2{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        margin-right: 0;
+        
+        margin-bottom: 2%;
+    }
+    .card{
+        margin: 10px;
+    }
+    .card h3{
+        margin-top: 10px;
+    }
+    .card p{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 490px){
+    .textocores{
+        max-width: 90%;
+    }
+    .imagemcores{
+        max-width: 90%;
+    }
+    .card{
+        display: block;
+        justify-self: center;
+    }
+    .card img{
+        width:100px;
+    }
+}
