@@ -4,10 +4,10 @@
 
 ## Alunos integrantes da equipe
 
-* Lucas Alkmim Barros
 * Fábio Antônio Caldeira Andrade
-* [Nome completo do aluno 3]
-* [Nome completo do aluno 4]
+* Lívia Câmara Xavier
+* Lucas Alkmim Barros
+* Sophia Carrazza Ventorim de Sousa
 
 ## Professores responsáveis
 
