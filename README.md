@@ -5,7 +5,7 @@
 
 ## Alunos integrantes da equipe
 
-* Fábio Antônio Caldeira Andrad
+* Fábio Antônio Caldeira Andrade
 * Lívia Câmara Xavier
 * Lucas Alkmim Barros
 * Sophia Carrazza Ventorim de Sousa
