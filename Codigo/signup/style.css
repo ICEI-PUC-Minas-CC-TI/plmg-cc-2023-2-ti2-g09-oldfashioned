@@ -18,6 +18,8 @@
   align-items: center;
 }
 
+
+
 .left-side-menu {
   display: flex;
   gap: 50px;
@@ -525,5 +527,25 @@ footer {
   }
   .criarconta{
     font-size: 35px;
+  }
+
+   /* Estilos personalizados para o input de arquivo */
+   #file-input-element {
+    display: none; /* Oculta o input original */
+  }
+
+  .custom-file-upload {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+
+  /* Estilo para destacar quando o usuário passa o mouse sobre o botão personalizado */
+  .custom-file-upload:hover {
+    background-color: #45a049;
   }
 }

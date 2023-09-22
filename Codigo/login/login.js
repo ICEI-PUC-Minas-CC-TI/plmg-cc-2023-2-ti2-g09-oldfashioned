@@ -5,7 +5,7 @@ if (localStorage.getItem('userLogado')) {
 
   // Criar o ícone do perfil
   var novoLink = document.createElement("a");
-  novoLink.setAttribute("href", "/meuperfil/perfil.html");
+  novoLink.setAttribute("href", "/Codigo/meuperfil/perfil.html");
   var perfilIcon = document.createElement("img");
   const url = localStorage.getItem('image');
   const img = new Image();
@@ -62,7 +62,7 @@ function entrar(){
   })
 
   if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = '../meuperfil/perfil.html'
+    window.location.href = '../Codigo/meuperfil/perfil.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom

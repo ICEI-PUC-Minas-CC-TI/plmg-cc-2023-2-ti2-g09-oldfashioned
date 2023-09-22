@@ -86,9 +86,9 @@ nav ul li {
 }
 .container{
     display: flex;
-    gap: 15rem;
+    gap: 10rem;
     justify-content: center;
-    font-size: 1.9rem;
+    font-size: 1rem;
     margin-top: 3rem;
 }
 .left{
@@ -111,7 +111,7 @@ nav ul li {
     margin-bottom: 1rem;
 }
 #fotoperfil img{
-    max-width: 600px;
+    max-width: 200px;
     max-height: 600px;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -120,9 +120,9 @@ nav ul li {
 
 .left button{
     border-radius: 20rem;
-    width: 15rem;
-    height: 6rem;
-    font-size: 35px;
+    width: 5rem;
+    height: 2rem;
+    font-size: 15px;
     cursor: pointer;
     border: 1px solid black;
 

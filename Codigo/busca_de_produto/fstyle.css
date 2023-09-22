@@ -835,12 +835,13 @@ footer{
     justify-content: space-between;
     gap: 260%;
 }
+
 .jesus {
     margin: 20px;
     margin-left: 0px;
     text-decoration: none;
     color: black;
-    border-style:outset;
+    border-style: outset;
     padding: 20px 25px;
     border-radius: 10px;
     display: flex;
@@ -850,12 +851,11 @@ footer{
     font-size: 30px;
     font-weight: 700;
     align-self: center;
-    
-}
-
-.soph {
+    border: none;
+  }
+  .soph {
     margin-left: 8%;
-}
+  }
 main {
     display: flex;
     justify-content: center;
