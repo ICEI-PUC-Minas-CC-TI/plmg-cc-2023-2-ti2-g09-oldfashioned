@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;model.usuario&apos; to &apos;Usuario&apos;&#x0A;- Original project: &apos;ti2_projeto&apos;&#x0A;- Original element: &apos;model.usuario&apos;&#x0A;- Renamed element: &apos;model.Usuario&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;usuario&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;model{usuario.java[usuario" matchStrategy="1" name="Usuario" qualified="false" references="true" similarDeclarations="false" stamp="1697733106339" textual="false" version="1.0"/>
+</session>
