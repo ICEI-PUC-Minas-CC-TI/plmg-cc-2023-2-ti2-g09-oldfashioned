@@ -9,8 +9,8 @@ public class Aplicacao {
 	private static UsuarioService usuarioService = new UsuarioService();
 	
     public static void main(String[] args) {
-        port(5432);
-        
+        port(6789);
+
         post("/usuario/insert", (request, response) -> usuarioService.insert(request, response));
 
         /*get("/usuario/get/id", (request, response) -> usuarioService.get(request, response));
