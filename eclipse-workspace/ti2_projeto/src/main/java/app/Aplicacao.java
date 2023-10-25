@@ -10,12 +10,10 @@ public class Aplicacao {
 	
     public static void main(String[] args) {
         port(6789);
-        
-        staticFiles.location("/public");
-        
+                
         post("/usuario/insert", (request, response) -> usuarioService.insert(request, response));
 
-        get("/usuario/get/id", (request, response) -> usuarioService.get(request, response));
+        /*get("/usuario/get/id", (request, response) -> usuarioService.get(request, response));
         
         get("/usuario/list", (request, response) -> usuarioService.getAll(request, response));
         
@@ -24,6 +22,7 @@ public class Aplicacao {
         post("/usuario/update/id", (request, response) -> usuarioService.update(request, response));
            
         delete("/usuario/delete/id", (request, response) -> usuarioService.delete(request, response));
+        */
 
              
     }
