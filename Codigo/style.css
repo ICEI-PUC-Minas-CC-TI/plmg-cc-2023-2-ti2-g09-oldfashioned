@@ -111,9 +111,10 @@ nav ul li {
   gap: 2rem;
   padding-top: 0.5rem;
 }
-.menu2{
+
+.menu2{ 
   border: 1px solid #aca4a4;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 10px;
   height: fit-content;
 }
@@ -315,17 +316,32 @@ nav ul li {
 .lupa {
   width: 1.3rem;
 }
+
 .menu2 {
+  display: flex; /* Tornando-o um container flex */
+  flex-direction: column; /* Alinhando os itens verticalmente */
+  justify-content: center; /* Centralizando os itens verticalmente */
+  align-items: center; /* Centralizando os itens horizontalmente */
+  border: 1px solid #aca4a4;
+  border-radius: 10px;
+  padding: 1%;
+  width: 100%; /* Definindo a largura para 100% */
+  box-sizing: border-box; /* Certificando-se de que as bordas e o preenchimento não aumentem a largura */
+}
+
+
+
+/*.menu2 {
   border: 1px solid #aca4a4;
   width: 40rem;
   height: fit-content;
   padding-bottom: 10px;
-  display: flex;
+  display:flex;
   flex-direction: column;
   align-items: center;
   gap: 3.5rem;
   padding-top: 0.5rem;
-}
+}*/
 .contas {
   display: flex;
   gap: 2rem;
