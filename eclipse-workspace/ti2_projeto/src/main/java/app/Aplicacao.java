@@ -10,7 +10,7 @@ public class Aplicacao {
 	
     public static void main(String[] args) {
         port(5432);
-                
+        
         post("/usuario/insert", (request, response) -> usuarioService.insert(request, response));
 
         /*get("/usuario/get/id", (request, response) -> usuarioService.get(request, response));
@@ -23,6 +23,8 @@ public class Aplicacao {
            
         delete("/usuario/delete/id", (request, response) -> usuarioService.delete(request, response));
         */
+
+       // post("/produto/insert", (request, response) -> usuarioService.insert(request, response));
 
              
     }

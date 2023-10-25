@@ -2,7 +2,7 @@ package model;
 
 public class Produto {
     private int produtoId;
-    private String username;
+    private int userId;
     private String nome;
     private String descricao;
     private String imagem;
@@ -16,14 +16,14 @@ public class Produto {
 
     //Construtores
     public Produto(){
-        username = nome = descricao = imagem = linkSite = linkMedidas = cor = tamanho = evento = "";
-        produtoId = quantidade = 0;
+        nome = descricao = imagem = linkSite = linkMedidas = cor = tamanho = evento = "";
+        userId = produtoId = quantidade = 0;
         preco = 0.0;
     }
 
-    public Produto(int produtoId, String username, String nome, String descricao, String imagem, double preco, int quantidade, String linkSite, String linkMedidas, String cor, String tamanho, String evento){
+    public Produto(int produtoId, int userId, String nome, String descricao, String imagem, double preco, int quantidade, String linkSite, String linkMedidas, String cor, String tamanho, String evento){
         this.produtoId = produtoId;
-        this.username = username;
+        this.userId = userId;
         this.nome = nome;
         this.descricao = descricao;
         this.imagem = imagem;
@@ -46,12 +46,12 @@ public class Produto {
         return produtoId;
     }   
 
-    public void setUsername(String username){
-        this.username = username;
+    public void setUserId(int userId){
+        this.userId = userId;
     }
 
-    public String getUsername(){
-        return username;
+    public int getUserId(){
+        return userId;
     }
 
     public void setNome(String nome){
@@ -136,6 +136,6 @@ public class Produto {
 
     @Override
     public String toString(){
-        return produtoId + ":" + username + ":" + nome + ":" + descricao + ":" + imagem + ":" + preco + ":" + quantidade + ":" + linkSite + ":" + linkMedidas + ":" + cor + ":" + tamanho + ":" + evento;
+        return produtoId + ":" + userId + ":" + nome + ":" + descricao + ":" + imagem + ":" + preco + ":" + quantidade + ":" + linkSite + ":" + linkMedidas + ":" + cor + ":" + tamanho + ":" + evento;
     }
 }

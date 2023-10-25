@@ -21,8 +21,8 @@ public class ProdutoDAO extends DAO{
         boolean status = false;
         try {
 
-            String sql = "INSERT INTO produto ( username, nome, descricao, imagem, preco, quantidade, linkSite, linkMedidas, cor, tamanho, evento) "
-            + "VALUES ('" + produto.getUsername() + "', '"
+            String sql = "INSERT INTO produto ( userId, nome, descricao, imagem, preco, quantidade, linkSite, linkMedidas, cor, tamanho, evento) "
+            + "VALUES (" + produto.getUserId() + ", '"
             + produto.getNome() + "', '" + produto.getDescricao() + "', '" + produto.getImagem() + "', " + produto.getPreco() + " , " + produto.getQuantidade() + ", '" + produto.getLinkSite() + "', '" + produto.getLinkMedidas() + "', '" + produto.getCor() + "', '" + produto.getTamanho() + "', '" + produto.getEvento() + "');";
             PreparedStatement st = conexao.prepareStatement(sql);
             st.executeUpdate();

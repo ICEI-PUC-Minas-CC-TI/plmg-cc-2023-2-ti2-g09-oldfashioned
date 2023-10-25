@@ -20,6 +20,9 @@ public class UsuarioService {
 	}
 
 	public String insert(Request request, Response response){
+		
+		System.out.println("Conexão efetuada com o service Usuario!");
+		
 		String str = request.body();
 
 		Gson gson = new Gson();
