@@ -15,13 +15,15 @@ public class Aplicacao {
         
         post("/usuario/insert", (request, response) -> usuarioService.insert(request, response));
 
-        get("/usuario/get/:id", (request, response) -> usuarioService.get(request, response));
+        get("/usuario/get/id", (request, response) -> usuarioService.get(request, response));
         
         get("/usuario/list", (request, response) -> usuarioService.getAll(request, response));
         
-        post("/usuario/update/:id", (request, response) -> usuarioService.update(request, response));
+        get("/usuario/update/id", (request, response) -> usuarioService.getToUpdate(request, response));
+        
+        post("/usuario/update/id", (request, response) -> usuarioService.update(request, response));
            
-        delete("/usuario/delete/:id", (request, response) -> usuarioService.delete(request, response));
+        delete("/usuario/delete/id", (request, response) -> usuarioService.delete(request, response));
 
              
     }

@@ -21,7 +21,6 @@ public class UsuarioService {
 	public UsuarioService() {
 		makeForm();
 	}
-
 	
 	public void makeForm() {
 		makeForm(FORM_INSERT, new Usuario());
@@ -36,12 +35,14 @@ public class UsuarioService {
 		String umUsuario = "";
 		
 		if (tipo != FORM_INSERT) {
+			System.out.println("detail!");
+
 			umUsuario += "\t<table width=\"80%\" bgcolor=\"#f3f3f3\" align=\"center\">";
 			umUsuario += "\t\t<tr>";
 			umUsuario += "\t\t\t<td align=\"left\"><font size=\"+2\"><b>&nbsp;&nbsp;&nbsp;<a href=\"/usuario/list/1\">Novo Usuario</a></b></font></td>";
 			umUsuario += "\t\t</tr>";
 			umUsuario += "\t</table>";
-			umUsuario += "\t<br>";
+			umUsuario += "\t<br>";	
 		}
 	
 		if (tipo == FORM_INSERT || tipo == FORM_UPDATE) {
@@ -248,6 +249,8 @@ public class UsuarioService {
 	
 	
 	public Object getAll(Request request, Response response) {
+		System.out.println("get all!");
+
 		makeForm();
 	    response.header("Content-Type", "text/html");
 	    response.header("Content-Encoding", "UTF-8");
