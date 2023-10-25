@@ -18,6 +18,8 @@ public class ProdutoService {
     }
 
     public String insert(Request request, Response response){
+        System.out.println("Conexão efetuada com o postgres!");
+
         String str = request.body();
 
         Gson gson = new Gson();

@@ -13,26 +13,26 @@ import com.google.gson.Gson;
 
 public class UsuarioService {
 
-	public UsuarioDAO usuarioDAO = new UsuarioDAO();
+        public UsuarioDAO usuarioDAO = new UsuarioDAO();
 
-	public UsuarioService(){
+        public UsuarioService(){
 
-	}
+        }
 
-	public String insert(Request request, Response response){
-		
-		System.out.println("Conexão efetuada com o service Usuario!");
-		
-		String str = request.body();
+        public String insert(Request request, Response response){
 
-		Gson gson = new Gson();
-		Usuario usuario = gson.fromJson(str, Usuario.class);
-		
-		if(usuarioDAO.insert(usuario) == true){
-			return "Usuário inserido com sucesso!";
-		}
-		else{
-			return "Erro ao inserir usuário!";
-		}
-	}
-} 
+			System.out.println("Conexão efetuada com o service!");
+
+                String str = request.body();
+
+                Gson gson = new Gson();
+                Usuario usuario = gson.fromJson(str, Usuario.class);
+
+                if(usuarioDAO.insert(usuario) == true){
+                        return "Usuário inserido com sucesso!";
+                }
+                else{
+                        return "Erro ao inserir usuário!";
+                }
+        }
+}
