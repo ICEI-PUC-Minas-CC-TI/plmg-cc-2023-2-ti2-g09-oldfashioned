@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Old Fashioned</title>
     <link rel="stylesheet" href="style.css" />
-
+    <script
+      src="https://kit.fontawesome.com/4ac5c9f100.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="script.js" defer></script>
 
   </head>
   <body>
@@ -27,7 +31,7 @@
             </nav>
         </div>
         <div class="right-side-menu" id="rightsidemenu">
-            <a href="/Codigo/favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
+            <a href="favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
             
 
           
@@ -35,9 +39,52 @@
         
         </div>
         <div class="line"></div>
-      </header>
+    </header>
+    <div class="principal">
+    <h1 class="msgprincipal">
+      A Old Fashioned foi criada para você se encontrar na moda atual, porque
+      independentemente da idade, o importante é se sentir bem na própria pele.
+    </h1>
+    <div class="containersup">
+      <div class="menu1">
+        <div>
+          <h3 class="menu1title">
+            Descubra dicas, inspirações e ideias para seu estilo sênior.
+          </h3>
+        </div>
+        <script src="app.js"></script>
+<div class="pesquisarapida">
+<div class="leftsidepesquisa">
+  <h3>Pesquisa por eventos</h3>
+
+  <button class="opentest" id="opentest" onclick="redirecionar()">Comece aqui</button>
+</div>
+
+<div class="rightsidepesquisa">
+    <h3>Pesquisa rápida</h3>
+    <section class="container1">
+      <form>
+          <i class="fas fa-search"></i>
+          <input type="text" name="" id="search-item" placeholder="Pesquise por um produto"
+           onkeyup="search()">
+      </form>
+
+      <div class="product-list" id="product-list">
+      </div>
+
+  </section>
+    
+      </button>
+    </form>
+  
+</div>
+    
+</div>   
+    
+      </div>
+      <div class="segundaparte">
       <div class="menu2">
-        <h3 class="menu1title">Entre em uma conta existente ou crie uma</h3>
+        <h3 class="menu1title">Entre em uma conta</h3>
         <div class="contas">
           <div class="criarconta">
             <a href="signup/signup.html">
@@ -65,51 +112,10 @@
           </div>
         </div>
       </div>
-      <h1 class="msgprincipal">
-        A Old Fashioned foi criada para você se encontrar na moda atual, porque
-        independentemente da idade, o importante é se sentir bem na própria pele.
-      </h1>
-    <div class="containersup">
-      <div class="menu1">
-        <div>
-          <h3 class="menu1title">
-            Descubra dicas,inspirações e ideias para seu estilo sênior no
-            conforto de sua casa.
-          </h3>
-        </div>
-        <script src="app.js"></script>
-<div class="pesquisarapida">
-<div class="leftsidepesquisa">
-  <h3>Pesquisa por eventos</h3>
-  <button class="opentest" id="opentest" onclick="redirecionar()">Comece aqui</button>
-</div>
-
-<div class="rightsidepesquisa">
-    <h3>Pesquisa rápida</h3>
-    <section class="container1">
-      <form>
-          <i class="fas fa-search"></i>
-          <input type="text" name="" id="search-item" placeholder="Pesquise por um produto"
-           onkeyup="search()">
-      </form>
-
-      <div class="product-list" id="product-list">
-      </div>
-
-  </section>
-    
-      </button>
-    </form>
-  
-</div>
-    
-</div>   
-    
-      </div>
       <div class="menu3">
-        <a href="/Codigo/busca_de_produto/cores.html">
+        <a href="busca_de_produto/cores.html">
           <div class="colorflex">
-            <h3 class="menu1title">
+            <h3 class="menu3title">
               Aprenda como as cores influenciam sua imagem
             </h3>
             <img src="images/circulocrom.png" alt="" class="cromcircle" />
@@ -117,6 +123,7 @@
         </a>
       </div>
     </div>
+  </div>
     <h2 class="trendstitle">Todas as peças</h2>
     
           <div id="products">
@@ -135,7 +142,7 @@
           </div>
 
     </div>
-
+  </div>
     <footer>
         <div class="container-footer">
             <div class="row-footer">
@@ -189,13 +196,8 @@
         </div>
     </footer>
         
-    <script
-    src="https://kit.fontawesome.com/4ac5c9f100.js"
-    crossorigin="anonymous" ></script>
+    
 
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="script.js" defer></script>
-  <script src="script.js" defer></script>
 
   </body>
 </html>

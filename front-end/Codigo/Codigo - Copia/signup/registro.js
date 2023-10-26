@@ -6,7 +6,7 @@ if (localStorage.getItem('userLogado')) {
 
   // Criar o ícone do perfil
   var novoLink = document.createElement("a");
-  novoLink.setAttribute("href", "/Codigo/meuperfil/perfil.html");
+  novoLink.setAttribute("href", "../meuperfil/perfil.html");
   var perfilIcon = document.createElement("img");
   const url = localStorage.getItem('image');
   const img = new Image();

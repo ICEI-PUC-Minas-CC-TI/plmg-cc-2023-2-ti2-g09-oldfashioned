@@ -4,18 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Cadastro</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script
-    src="https://kit.fontawesome.com/4ac5c9f100.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="registro.js" defer></script>
-  <script src="script.js" defer></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-
+    <script src="login.js" defer></script>
   </head>
   <body>
     <header>
@@ -36,7 +27,7 @@
         </div>
         <div class="right-side-menu" id="rightsidemenu">
             <a href="../favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
-            
+
 
       
         </div>
@@ -46,56 +37,35 @@
     </header>
     <div class="line"></div>
     <div class="corpo">
-      <hr class="linha"/>
+      <hr />
       <div class="tituloconta">
-        <h1>Crie uma conta</h1>
-        <h3>Se você ainda não possuir uma conta, crie uma agora!</h3>
+        <h1>Login</h1>
       </div>
-      <hr class="linha"/>
-      <div id="msgError"></div>
-      <div id="msgSuccess"></div>
+      <hr />
       <div class="criarconta">
-
-        <div class="fotoperfil">
-          <h4 class="titleinfo">Sua foto de perfil:</h4>
-          <label for="file-input-element" class="custom-file-upload">Escolher arquivo</label>
-          <input type="file" id="file-input-element" accept="image/jpeg">
-          <label for="descricao">Descrição:</label>
-          <input type="text" name="descricao" class="descricao" id="descricao" />
-        </div>
+        <div id="msgError"></div>
         <div class="uep">
-          <label for="usuario" id="labelUsuario"  class="titleinfo">Usuário:</label>
-          <input type="text" id="usuario" name="usuario" class="info" />
-          <label for="realname" id="labelNome"  class="titleinfo">Nome real:</label>
-          <input type="text" id="nome" name="realname" class="info" />
-          
-          <label for="email" class="titleinfo">E-mail:</label>
-          <input type="text" name="email" class="info" id="email"/>
-          <label for="password" class="titleinfo" id="labelSenha">Senha</label>
-          <input type="password" id="senha" name="password" class="info" />
-          <label for="password" class="titleinfo" id="labelConfirmSenha">Confirmar senha</label>
-          <input type="password" id="confirmSenha" name="password" class="info" />
-          <div class="age-">
-            <div class="age">
-              <label for="nascimento" class="titleage"
-                >Idade:</label
-              >
-              <input type="text" name="nascimento" id="idade">
-            </div>
-            <div class="gender">
-              <p class="titleinfo">Gênero</p>
-              <div class="generos">
-                <input type="text" id="genero">
-              </div>
-            </div>
-          </div>
-          <div class="remember-account">
-            <a href="../login/login.html">Já possui uma conta?</a>
-          </div>
+          <label for="usuario" id="userLabel" class="titleinfo">Usuário:</label>
+          <input type="text" name="usuario" class="info" id="usuario"/>
+          <label for="password" id="senhaLabel" class="titleinfo">Senha</label>
+          <input type="password" name="password" class="info" id="senha"/>
           <div class="justify-center">
-            <button onclick="cadastrar()" class="confirmar">Cadastrar</button>
+            <button onclick="entrar()" class="botaoentrar">Entrar</button>
           </div>
+  
+          <div class="justify-center">
+            <hr />
+          </div>
+  
+          <p>
+            Não tem uma conta?
+            <a href="../signup/signup.html">
+              Cadastre-se
+            </a>
+          </p>
+
         </div>
+        <img src="images/mainimg.jpeg" alt="" class="mainimg">
       </div>
     </div>
     <footer>
@@ -152,5 +122,6 @@
   </footer>
       
 
+    
   </body>
 </html>

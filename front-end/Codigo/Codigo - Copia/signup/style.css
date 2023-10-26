@@ -109,6 +109,10 @@ nav ul li {
   height: 5rem;
   padding-left: 1rem;
   margin-top: 2.5%;
+  border-radius: 15px;
+  border-color: darkgray;
+  border-style: solid;
+  border-width: 1px;
 }
 .uep {
   display: flex;
@@ -532,6 +536,7 @@ footer {
    /* Estilos personalizados para o input de arquivo */
    #file-input-element {
     display: none; /* Oculta o input original */
+    
   }
 
   .custom-file-upload {

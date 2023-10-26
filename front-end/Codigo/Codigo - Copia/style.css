@@ -92,6 +92,8 @@ nav ul li {
   margin-top: 3rem;
   margin-left: 2rem;
   font-size: 28px;
+  max-width: 87%;
+  text-align: center;
 }
 .containersup {
   display: flex;
@@ -111,10 +113,9 @@ nav ul li {
   gap: 2rem;
   padding-top: 0.5rem;
 }
-
-.menu2{ 
+.menu2{
   border: 1px solid #aca4a4;
-  border-radius: 10px;
+  border-radius: 15px;
   padding: 10px;
   height: fit-content;
 }
@@ -256,6 +257,7 @@ nav ul li {
   flex-direction: column ;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 .logo3{
   display: none;
@@ -265,7 +267,8 @@ nav ul li {
   font-size: 25px;
   margin-top: 2rem;
   margin-left: 2rem;
-  
+  text-align: center;
+
 }
 .pesquisarapida {
   border: 1px solid rgb(182, 181, 181);
@@ -316,32 +319,20 @@ nav ul li {
 .lupa {
   width: 1.3rem;
 }
-
 .menu2 {
-  display: flex; /* Tornando-o um container flex */
-  flex-direction: column; /* Alinhando os itens verticalmente */
-  justify-content: center; /* Centralizando os itens verticalmente */
-  align-items: center; /* Centralizando os itens horizontalmente */
-  border: 1px solid #aca4a4;
-  border-radius: 10px;
-  padding: 1%;
-  width: 100%; /* Definindo a largura para 100% */
-  box-sizing: border-box; /* Certificando-se de que as bordas e o preenchimento não aumentem a largura */
-}
-
-
-
-/*.menu2 {
   border: 1px solid #aca4a4;
   width: 40rem;
   height: fit-content;
   padding-bottom: 10px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.5rem;
+  gap:2rem;
   padding-top: 0.5rem;
-}*/
+  max-width: 30rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .contas {
   display: flex;
   gap: 2rem;
@@ -373,6 +364,7 @@ nav ul li {
   text-decoration: none;
   color: black;
 }
+
 .criarconta a {
   background-color: transparent;
   border: none;
@@ -384,6 +376,11 @@ nav ul li {
   flex-direction: column;
   align-items: center;
 }
+.criarcontatitle{
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 .entrarflex {
   display: flex;
   flex-direction: column;
@@ -391,6 +388,8 @@ nav ul li {
 }
 .entrarcontatitle {
   font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
 }
 .criarcontaimg {
   width: 3rem;
@@ -408,14 +407,23 @@ nav ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  padding-top: 0.5rem;
+  justify-content: center;
+
+}
+.menu3title{
+  font-size: 1.6rem;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .menu3 a {
   background-color: transparent;
   border: none;
   text-decoration: none;
   color: black;
+}
+.menu3 img{
+  width: 13rem;
 }
 .colorflex {
   display: flex;
@@ -531,6 +539,7 @@ nav ul li {
   margin-left: 4rem;
   margin-bottom: 4rem;
 }
+
 #myModal {
   /* Definir as propriedades para posicionar o modal no centro */
   position: fixed;
@@ -778,6 +787,14 @@ footer {
 .soph {
   margin-left: 8%;
 }
+
+.principal{
+  max-width: 75%;
+  margin: auto;
+}
+
+
+
 @media(max-width:1440px){
   .containersup{
     margin-right: 2rem;
@@ -804,8 +821,10 @@ footer {
     margin-top: 2rem;
     width: 100%;
   }
-  .menu1title{
+  .menu1title h3{
     font-size: 20px;
+    text-align: center;
+
   }
   .menu1{
     width: 55rem;
@@ -834,16 +853,7 @@ footer {
       "prod5 prod6";
 
   }
-  .prod7{
-    display: none;
-  }
-  .prod8{
-    display: none;
-  }
-  .prod9{
-    display: none;
-  }
-
+  
 }
 
 
