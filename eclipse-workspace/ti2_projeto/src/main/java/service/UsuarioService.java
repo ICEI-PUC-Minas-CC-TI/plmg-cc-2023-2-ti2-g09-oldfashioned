@@ -62,18 +62,19 @@ public class UsuarioService {
 		}
 	}
 
+	//metodo get que retorna um json com o usuario
 	public String get(Request request, Response response){
 		String str = request.body();
 
 		Gson gson = new Gson();
 		Usuario usuario = gson.fromJson(str, Usuario.class);
-		
-		Usuario usuarioBuscado = usuarioDAO.get(usuario.getId());
-		if(usuarioBuscado != null){
-			return "Usuário encontrado: " + usuarioBuscado.getNome();
+
+		if(usuario.getId() == 0){
+			return "Erro ao buscar usuário!";
 		}
 		else{
-			return "Usuário não encontrado!";
+			usuario = usuarioDAO.get(usuario.getId());
+			return gson.toJson(usuario);
 		}
 	}
 

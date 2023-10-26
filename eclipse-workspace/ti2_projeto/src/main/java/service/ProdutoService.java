@@ -63,21 +63,20 @@ public class ProdutoService {
 			return "Erro ao atualizar produto!";
 		}
 	}
-
+	
+	//metodo get que retorna um json
     public String get(Request request, Response response){
 		String str = request.body();
 
-        JsonObject jsonObject = JsonParser.parseString(str).getAsJsonObject();
+		Gson gson = new Gson();
+		Produto produto = gson.fromJson(str, Produto.class);
 
-        int produto_id = Integer.parseInt(jsonObject.get("produto_id").getAsString());
-		
-		Produto produtoBuscado = produtoDAO.get(produto_id);
-
-		if(produtoBuscado != null){
-			return "Produto encontrado: " + produtoBuscado.getNome();
+		if(produto.getProdutoId() == 0){
+			return "Erro ao buscar Produto!";
 		}
 		else{
-			return "Produto não encontrado!";
+			produto = produtoDAO.get(produto.getProdutoId());
+			return gson.toJson(produto);
 		}
 	}
 
