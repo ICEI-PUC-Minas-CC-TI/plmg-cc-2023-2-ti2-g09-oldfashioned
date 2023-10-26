@@ -31,6 +31,7 @@ public class UsuarioService {
 		else{
 			return "Erro ao inserir usuário!";
 		}
+
 	}
 
 	public String delete(Request request, Response response){
