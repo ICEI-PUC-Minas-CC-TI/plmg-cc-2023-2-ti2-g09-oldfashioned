@@ -22,9 +22,8 @@ public class ProdutoDAO extends DAO{
         boolean status = false;
         try {
 
-            String sql = "INSERT INTO produto ( user_id, nome, descricao, imagem, preco, quantidade, link_site, link_medidas, cor, tamanho, evento) "
-            + "VALUES (" + produto.getUserId() + ", '"
-            + produto.getNome() + "', '" + produto.getDescricao() + "', '" + produto.getImagem() + "', " + produto.getPreco() + " , " + produto.getQuantidade() + ", '" + produto.getLinkSite() + "', '" + produto.getLinkMedidas() + "', '" + produto.getCor() + "', '" + produto.getTamanho() + "', '" + produto.getEvento() + "');";
+            String sql = "INSERT INTO produto ( nome, descricao, imagem, preco, quantidade, link_site, link_medidas, cor, tamanho, evento) "
+            + "VALUES ('" + produto.getNome() + "', '" + produto.getDescricao() + "', '" + produto.getImagem() + "', " + produto.getPreco() + " , " + produto.getQuantidade() + ", '" + produto.getLinkSite() + "', '" + produto.getLinkMedidas() + "', '" + produto.getCor() + "', '" + produto.getTamanho() + "', '" + produto.getEvento() + "');";
             PreparedStatement st = conexao.prepareStatement(sql);
             st.executeUpdate();
             st.close();
@@ -52,7 +51,7 @@ public class ProdutoDAO extends DAO{
 		boolean status = false;
 		try {
 
-			String sql = "UPDATE produto SET user_id = " + produto.getUserId() + ", nome = '"  
+			String sql = "UPDATE produto SET nome = '"  
 			+ produto.getNome() + "', descricao = '" + produto.getDescricao() + "', imagem = '" + produto.getImagem() + "', preco = " 
             + produto.getPreco() + ", quantidade = " + produto.getQuantidade() + ", link_site = '" + produto.getLinkSite() 
             + "', link_medidas = '" + produto.getLinkMedidas() + "', cor = '" + produto.getCor() + "', tamanho = '" + produto.getTamanho() 
@@ -77,7 +76,6 @@ public class ProdutoDAO extends DAO{
 			if(rs.next()){
 				produto = new Produto(
 					rs.getInt("produto_id"),
-					rs.getInt("user_id"),
 					rs.getString("nome"),
 					rs.getString("descricao"),
 					rs.getString("imagem"),
@@ -110,7 +108,6 @@ public class ProdutoDAO extends DAO{
 	             for(int i = 0; rs.next(); i++) {
 	                produtos[i] = new Produto(
 						rs.getInt("produto_id"),
-						rs.getInt("user_id"),
 						rs.getString("nome"),
 						rs.getString("descricao"),
 						rs.getString("imagem"),

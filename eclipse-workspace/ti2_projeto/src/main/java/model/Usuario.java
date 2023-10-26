@@ -9,13 +9,14 @@ public class Usuario {
 	private String genero;
 	private	String foto; //Link para a foto
 	private String senha;
+    private String produtosCurtidos;
 
     //Construtores
 	public Usuario(){
-        username = nome = email = genero = foto = senha = "";
+        username = nome = email = genero = foto = senha = produtosCurtidos = "";
         id = idade = 0;
     }
-    public Usuario(int id, String username, String nome, String email, int idade, String genero, String foto, String senha){
+    public Usuario(int id, String username, String nome, String email, int idade, String genero, String foto, String senha, String produtosCurtidos){
         this.id = id;
         this.username = username;
         this.nome = nome;
@@ -24,6 +25,7 @@ public class Usuario {
         this.genero = genero;
         this.foto = foto;
         this.senha = senha;
+        this.produtosCurtidos = produtosCurtidos;
     }
     
     //Setters e Getters
@@ -76,9 +78,17 @@ public class Usuario {
 
         return senha;
     }
+
+    public void setProdutosCurtidos(String produtosCurtidos){
+        this.produtosCurtidos = produtosCurtidos;
+    }
+
+    public String getProdutosCurtidos(){
+        return produtosCurtidos;
+    }
     @Override
     public String toString(){
-        String resp = id + ":" + username + ":" + nome + ":" + email + ":" + idade + ":" + genero + ":" + foto + ":" + senha;
+        String resp = id + ":" + username + ":" + nome + ":" + email + ":" + idade + ":" + genero + ":" + foto + ":" + senha + ":" + produtosCurtidos;
         return resp;
     }
 }

@@ -21,10 +21,9 @@ public class UsuarioDAO extends DAO{
 		//Status da conexão:
 		boolean status = false;
 		try {
-
-			String sql = "INSERT INTO usuario ( username, nome, email, idade, genero, foto, senha) "
+			String sql = "INSERT INTO usuario ( username, nome, email, idade, genero, foto, senha, produtos_curtidos) "
 			+ "VALUES ('" + usuario.getUsername() + "', '"
-			+ usuario.getNome() + "', '" + usuario.getEmail() + "', " + usuario.getIdade() + " , '" + usuario.getGenero() + "', '" + usuario.getFoto() + "', '" + usuario.getSenha() + "');";
+			+ usuario.getNome() + "', '" + usuario.getEmail() + "', " + usuario.getIdade() + " , '" + usuario.getGenero() + "', '" + usuario.getFoto() + "', '" + usuario.getSenha() + "', '" + usuario.getProdutosCurtidos() + "');";
 			PreparedStatement st = conexao.prepareStatement(sql);
 			st.executeUpdate();
 			st.close();
@@ -52,7 +51,7 @@ public class UsuarioDAO extends DAO{
 		boolean status = false;
 		try {
 			String sql = "UPDATE usuario SET username = '" + usuario.getUsername() + "', nome = '"  
-			+ usuario.getNome() + "', email = '" + usuario.getEmail() + "', idade = " + usuario.getIdade() + ", genero = '" + usuario.getGenero() + "', foto = '" + usuario.getFoto() + "', senha = '" + usuario.getSenha() + "'"
+			+ usuario.getNome() + "', email = '" + usuario.getEmail() + "', idade = " + usuario.getIdade() + ", genero = '" + usuario.getGenero() + "', foto = '" + usuario.getFoto() + "', senha = '" + usuario.getSenha() + "', produtos_curtidos = '" + usuario.getProdutosCurtidos() + "'"
 			+ " WHERE id = " + usuario.getId();
 			PreparedStatement st = conexao.prepareStatement(sql);
 			st.executeUpdate();
@@ -78,7 +77,8 @@ public class UsuarioDAO extends DAO{
 					rs.getInt("idade"),
 					rs.getString("genero"),
 					rs.getString("foto"),
-					rs.getString("senha")
+					rs.getString("senha"),
+					rs.getString("produtos_curtidos")
 				);
 			}
 			st.close();
@@ -107,7 +107,8 @@ public class UsuarioDAO extends DAO{
 						rs.getInt("idade"),
 						rs.getString("genero"),
 						rs.getString("foto"),
-						rs.getString("senha")
+						rs.getString("senha"),
+						rs.getString("produtos_curtidos")
 					);
 				}
 			}

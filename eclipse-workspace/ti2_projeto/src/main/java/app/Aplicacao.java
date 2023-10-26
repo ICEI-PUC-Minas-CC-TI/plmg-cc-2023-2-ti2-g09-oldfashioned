@@ -11,11 +11,11 @@ public class Aplicacao {
 
     public static void main(String[] args) {
 
-        //printando teste na tela
-        
-
-
         port(6789);
+
+        staticFiles.location("/public");
+
+        CorsFilter.apply();
 
         post("/usuario/insert", (request, response) -> usuarioService.insert(request, response));
 

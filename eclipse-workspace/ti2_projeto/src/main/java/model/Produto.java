@@ -2,7 +2,6 @@ package model;
 
 public class Produto {
     private int produtoId;
-    private int userId;
     private String nome;
     private String descricao;
     private String imagem;
@@ -17,13 +16,12 @@ public class Produto {
     //Construtores
     public Produto(){
         nome = descricao = imagem = linkSite = linkMedidas = cor = tamanho = evento = "";
-        userId = produtoId = quantidade = 0;
+        produtoId = quantidade = 0;
         preco = 0.0;
     }
 
-    public Produto(int produtoId, int userId, String nome, String descricao, String imagem, double preco, int quantidade, String linkSite, String linkMedidas, String cor, String tamanho, String evento){
+    public Produto(int produtoId, String nome, String descricao, String imagem, double preco, int quantidade, String linkSite, String linkMedidas, String cor, String tamanho, String evento){
         this.produtoId = produtoId;
-        this.userId = userId;
         this.nome = nome;
         this.descricao = descricao;
         this.imagem = imagem;
@@ -45,14 +43,6 @@ public class Produto {
     public int getProdutoId(){
         return produtoId;
     }   
-
-    public void setUserId(int userId){
-        this.userId = userId;
-    }
-
-    public int getUserId(){
-        return userId;
-    }
 
     public void setNome(String nome){
         this.nome = nome;
@@ -136,6 +126,6 @@ public class Produto {
 
     @Override
     public String toString(){
-        return produtoId + ":" + userId + ":" + nome + ":" + descricao + ":" + imagem + ":" + preco + ":" + quantidade + ":" + linkSite + ":" + linkMedidas + ":" + cor + ":" + tamanho + ":" + evento;
+        return produtoId + ":" + nome + ":" + descricao + ":" + imagem + ":" + preco + ":" + quantidade + ":" + linkSite + ":" + linkMedidas + ":" + cor + ":" + tamanho + ":" + evento;
     }
 }
