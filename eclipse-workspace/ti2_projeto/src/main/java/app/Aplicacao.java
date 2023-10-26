@@ -11,6 +11,10 @@ public class Aplicacao {
 
     public static void main(String[] args) {
 
+        //printando teste na tela
+        
+
+
         port(6789);
 
         //post("/usuario/insert", (request, response) -> usuarioService.insert(request, response));
@@ -20,6 +24,8 @@ public class Aplicacao {
         //post("/usuario/update", (request, response) -> usuarioService.update(request, response));
            
         //delete("/usuario/delete", (request, response) -> usuarioService.delete(request, response));
+
+        get("/usuario/list", (request, response) -> usuarioService.list(request, response));
         	
         //post("/produto/insert", (request, response) -> produtoService.insert(request, response));
 
@@ -29,6 +35,6 @@ public class Aplicacao {
 
         //delete("/produto/delete", (request, response) -> produtoService.delete(request, response));
 
-        
+        //get("produto/list", (request, response ) -> produtoService . list ( request , response ));
     }
 }
