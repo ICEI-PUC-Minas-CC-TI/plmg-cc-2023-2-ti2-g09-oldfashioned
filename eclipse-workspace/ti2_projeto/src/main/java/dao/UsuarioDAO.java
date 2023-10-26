@@ -65,7 +65,6 @@ public class UsuarioDAO extends DAO{
 	}
 
 	public Usuario get(int id){
-		System.out.println("ID: " + id);
 		Usuario usuario = null;
 		try {
 			Statement st = conexao.createStatement();
