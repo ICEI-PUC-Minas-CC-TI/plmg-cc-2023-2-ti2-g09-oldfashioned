@@ -76,4 +76,15 @@ public class UsuarioService {
 			return "Usuário não encontrado!";
 		}
 	}
+
+	public String list(Request request, Response response){
+		UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+		Usuario[] usuarios = usuarioDAO.list();
+
+		Gson gson = new Gson();
+		String json = gson.toJson(usuarios);
+
+		return json;
+	}
 } 

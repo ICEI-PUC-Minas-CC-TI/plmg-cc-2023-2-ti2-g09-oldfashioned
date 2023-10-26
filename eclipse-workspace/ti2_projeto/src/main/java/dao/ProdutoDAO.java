@@ -96,4 +96,38 @@ public class ProdutoDAO extends DAO{
 		}
 		return produto;
 	}
+
+	public Produto[] list(){
+		Produto[] produtos = null;
+		try {
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT * FROM produto");		
+	         if(rs.next()){
+	             rs.last();
+	             produtos = new Produto[rs.getRow()];
+	             rs.beforeFirst();
+
+	             for(int i = 0; rs.next(); i++) {
+	                produtos[i] = new Produto(
+						rs.getInt("produto_id"),
+						rs.getInt("user_id"),
+						rs.getString("nome"),
+						rs.getString("descricao"),
+						rs.getString("imagem"),
+						rs.getDouble("preco"),
+						rs.getInt("quantidade"),
+						rs.getString("link_site"),
+						rs.getString("link_medidas"),
+						rs.getString("cor"),
+						rs.getString("tamanho"),
+						rs.getString("evento")
+					);
+	             }
+	          }
+	          st.close();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+		return produtos;
+	}
 }

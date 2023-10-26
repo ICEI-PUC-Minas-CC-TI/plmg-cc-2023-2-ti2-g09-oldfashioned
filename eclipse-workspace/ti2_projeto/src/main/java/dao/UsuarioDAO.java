@@ -87,4 +87,34 @@ public class UsuarioDAO extends DAO{
 		}
 		return usuario;
 	}
+
+	public Usuario[] list(){
+		Usuario[] usuarios = null;
+		try {
+			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario");		
+			if(rs.next()){
+				rs.last();
+				usuarios = new Usuario[rs.getRow()];
+				rs.beforeFirst();
+
+				for(int i = 0; rs.next(); i++) {
+					usuarios[i] = new Usuario(
+						rs.getInt("id"),
+						rs.getString("username"),
+						rs.getString("nome"),
+						rs.getString("email"),
+						rs.getInt("idade"),
+						rs.getString("genero"),
+						rs.getString("foto"),
+						rs.getString("senha")
+					);
+				}
+			}
+			st.close();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
+		return usuarios;
+	}
 }

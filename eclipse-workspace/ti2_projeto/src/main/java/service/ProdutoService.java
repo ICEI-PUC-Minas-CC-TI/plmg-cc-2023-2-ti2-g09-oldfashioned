@@ -80,4 +80,15 @@ public class ProdutoService {
 			return "Produto não encontrado!";
 		}
 	}
+
+	public String list(Request request, Response response) {
+		ProdutoDAO produtoDAO = new ProdutoDAO(); // Crie uma instância da classe ProdutoDAO se necessário
+		Produto[] produtos = produtoDAO.list();
+	
+		Gson gson = new Gson();
+		String json = gson.toJson(produtos);
+	
+		return json;
+	}
+	
 }
