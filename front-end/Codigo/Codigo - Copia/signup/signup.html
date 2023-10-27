@@ -1,152 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Cadastro</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script
-    src="https://kit.fontawesome.com/4ac5c9f100.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="registro.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <div class="menu">
-        <div class="left-side-menu">
-            <div class="logo">
-                <a href="../index.html">
-                  <img class="logo2" src = "images/oldlogo2.png" height="58px">
-                  <img class="logo3" src = "images/oldlogo3.png" height="58px">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li> Não importa a idade, estar<br> na moda é se sentir bem na<br> própria pele.</li>
-      
-                </ul>
-            </nav>
-        </div>
-        <div class="right-side-menu" id="rightsidemenu">
-            <a href="../favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img src="images/heart-saved.svg" alt=""></a>
-            
 
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+</head>
+
+<body>
+  <header>
+    <div class="menu">
+      <div class="left-side-menu">
+        <div class="logo">
+          <a href="../index.html">
+            <img class="logo2" src="images/oldlogo2.png" height="58px">
+            <img class="logo3" src="images/oldlogo3.png" height="58px">
+          </a>
         </div>
-        
-        </div>
-        <div class="line"></div>
-    </header>
-    <div class="line"></div>
-    <div class="corpo">
-      <hr class="linha"/>
-      <div class="tituloconta">
-        <h1>Crie uma conta</h1>
-        <h3>Se você ainda não possuir uma conta, crie uma agora!</h3>
+        <nav>
+          <ul>
+            <li> Não importa a idade, estar<br> na moda é se sentir bem na<br> própria pele.</li>
+
+          </ul>
+        </nav>
       </div>
-      <hr class="linha"/>
-      <div id="msgError"></div>
-      <div id="msgSuccess"></div>
-      <div class="criarconta">
+      <div class="right-side-menu" id="rightsidemenu">
+        <a href="../favoritos/allpins/peçassalvas.html" class="favoritos_button">seus favoritos<img
+            src="images/heart-saved.svg" alt=""></a>
 
-        <div class="fotoperfil">
-          <h4 class="titleinfo">Sua foto de perfil:</h4>
-          <label for="file-input-element"  class="custom-file-upload">Escolher arquivo</label>
-          <input type="file"  id="file-input-element" accept="image/jpeg">
-          <label for="descricao">Descrição:</label>
-          <input type="text" name="descricao" class="descricao" id="descricao" />
+
+
+      </div>
+
+    </div>
+    <div class="line"></div>
+  </header>
+  <div class="line"></div>
+  <div class="corpo">
+    <hr class="linha" />
+    <div class="tituloconta">
+      <h1>Crie uma conta</h1>
+      <h3>Se você ainda não possuir uma conta, crie uma agora!</h3>
+    </div>
+    <hr class="linha" />
+    <div id="msgError"></div>
+    <div id="msgSuccess"></div>
+    <div class="criarconta">
+
+      <div class="fotoperfil">
+        <h4 class="titleinfo">Sua foto de perfil:</h4>
+        <label for="file-input-element" class="custom-file-upload">Escolher arquivo</label>
+        <input type="file" id="file-input-element" accept="image/jpeg">
+        <label for="descricao">Descrição:</label>
+        <input type="text" name="descricao" class="descricao" id="descricao" />
+      </div>
+      <div class="uep">
+        <label for="usuario" id="labelUsuario" class="titleinfo">Usuário:</label>
+        <input type="text" id="usuario" name="usuario" class="info" />
+        <label for="realname" id="labelNome" class="titleinfo">Nome real:</label>
+        <input type="text" id="nome" name="realname" class="info" />
+
+        <label for="email" class="titleinfo">E-mail:</label>
+        <input type="text" name="email" class="info" id="email" />
+        <label for="password" class="titleinfo" id="labelSenha">Senha</label>
+        <input type="password" id="senha" name="password" class="info" />
+        <label for="password" class="titleinfo" id="labelConfirmSenha">Confirmar senha</label>
+        <input type="password" id="confirmSenha" name="password" class="info" />
+        <div class="age-">
+          <div class="age">
+            <label for="nascimento" class="titleage">Idade:</label>
+            <input type="text" name="nascimento" id="idade">
+          </div>
+          <div class="gender">
+            <p class="titleinfo">Gênero</p>
+            <div class="generos">
+              <input type="text" id="genero">
+            </div>
+          </div>
         </div>
-        <div class="uep">
-          <label for="usuario" id="labelUsuario"  class="titleinfo">Usuário:</label>
-          <input type="text" id="usuario" name="usuario" class="info" />
-          <label for="realname" id="labelNome"  class="titleinfo">Nome real:</label>
-          <input type="text" id="nome" name="realname" class="info" />
-          
-          <label for="email" class="titleinfo">E-mail:</label>
-          <input type="text" name="email" class="info" id="email"/>
-          <label for="password" class="titleinfo" id="labelSenha">Senha</label>
-          <input type="password" id="senha" name="password" class="info" />
-          <label for="password" class="titleinfo" id="labelConfirmSenha">Confirmar senha</label>
-          <input type="password" id="confirmSenha" name="password" class="info" />
-          <div class="age-">
-            <div class="age">
-              <label for="nascimento" class="titleage"
-                >Idade:</label
-              >
-              <input type="text" name="nascimento" id="idade">
-            </div>
-            <div class="gender">
-              <p class="titleinfo">Gênero</p>
-              <div class="generos">
-                <input type="text" id="genero">
-              </div>
-            </div>
-          </div>
-          <div class="remember-account">
-            <a href="../login/login.html">Já possui uma conta?</a>
-          </div>
-          <div class="justify-center">
-            <button onclick="cadastrar()" class="confirmar">Cadastrar</button>
-          </div>
+        <div class="remember-account">
+          <a href="../login/login.html">Já possui uma conta?</a>
+        </div>
+        <div class="justify-center">
+          <button onclick="cadastrar(); cadastrarBD();" class="confirmar">Cadastrar</button>
         </div>
       </div>
     </div>
-    <footer>
-      <div class="container-footer">
-          <div class="row-footer">
-              <!-- footer col-->
-              <div class="footer-col">
-                  <h4>Redes sociais</h4>
-                  <div class="medias-socias">
-                      <ul>
-                          <div class="redecontainer">
-                              <li><a href="#" class="rede face"> <i class="fa fa-facebook"></i>Facebook</a></li>
-                          </div>
-                          <div class="redecontainer">
-                              <li><a href="#" class="rede tt"> <i class="fa fa-twitter"></i>Twitter</a></li>
-                          </div>
-                          <div class="redecontainer">
-                              <li><a href="#" class="rede insta"> <i class="fa fa-instagram"></i>Instagram</a></li>
-                          </div>
-                      </ul>
-                 </div>
-                  
-              </div>
-              <!--end footer col-->
-              <!-- footer col-->
-              <div class="footer-col">
-                  <h4>Sobre nós</h4>
-                  <ul>
-                      <li>Olá! Somos quatro estudantes de Ciência da Computação da Puc Minas que sonham em inovar na moda.</li>
-                      <li class="containerfoto"> <div class="cristo"><img src="iconsfooter/lucas.jpeg" alt="" class="foto"><h6> Lucas Alkmim </h6></div><div class="cristo soph" ><img src="iconsfooter/sophia.jpeg" alt="" class="foto"> <h6> Sophia Carrazza </h6> </div><div class="cristo"><img src="iconsfooter/fabio.jpeg" alt="" class="foto"><h6>Fábio Antônio</h6></div><div class="cristo"><img src="iconsfooter/livia.jpeg" alt="" class="foto"><h6>Lívia Câmara</h6></div></li>
-                  </ul>
-              </div>
-              <!--end footer col-->
-              <!-- footer col-->
-              <div class="footer-col">
-                  <h4 style="margin-left: 40% ;">Inscreva-se em nosso newsletter!</h4>
-                  <div class="form-sub">
-                      <form>
-                          <input type="email" placeholder="Digite o seu e-mail" required>
-                          <button>inscrever-se</button>
-                      </form>
-                  </div>
-                  <div class="old">
-                      <h5> Old Fashioned </h5>
-                      <h7> Estar na moda é se sentir bem na própria pele.</h7>
-                      </div>
-              <!--end footer col-->
-          </div>
-          <div class="ajuda">
-              <h6 style="margin-top: 10% ;"> All rights reserved </h6>
-              <div><a class="jesus" href="" class="suporte" ><h6>Ajuda e suporte</h6><img height= "30px" src="iconsfooter/ajuda.png" alt=""></a></div></div>
   </div>
-      </div>
-  </footer>
-      
+  <footer>
+    <div class="container-footer">
+      <div class="row-footer">
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4>Redes sociais</h4>
+          <div class="medias-socias">
+            <ul>
+              <div class="redecontainer">
+                <li><a href="#" class="rede face"> <i class="fa fa-facebook"></i>Facebook</a></li>
+              </div>  
+              <div class="redecontainer">
+                <li><a href="#" class="rede tt"> <i class="fa fa-twitter"></i>Twitter</a></li>
+              </div>
+              <div class="redecontainer">
+                <li><a href="#" class="rede insta"> <i class="fa fa-instagram"></i>Instagram</a></li>
+              </div>
+            </ul>
+          </div>
 
-  </body>
+        </div>
+        <!--end footer col-->
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4>Sobre nós</h4>
+          <ul>
+            <li>Olá! Somos quatro estudantes de Ciência da Computação da Puc Minas que sonham em inovar na moda.</li>
+            <li class="containerfoto">
+              <div class="cristo"><img src="iconsfooter/lucas.jpeg" alt="" class="foto">
+                <h6> Lucas Alkmim </h6>
+              </div>
+              <div class="cristo soph"><img src="iconsfooter/sophia.jpeg" alt="" class="foto">
+                <h6> Sophia Carrazza </h6>
+              </div>
+              <div class="cristo"><img src="iconsfooter/fabio.jpeg" alt="" class="foto">
+                <h6>Fábio Antônio</h6>
+              </div>
+              <div class="cristo"><img src="iconsfooter/livia.jpeg" alt="" class="foto">
+                <h6>Lívia Câmara</h6>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--end footer col-->
+        <!-- footer col-->
+        <div class="footer-col">
+          <h4 style="margin-left: 40% ;">Inscreva-se em nosso newsletter!</h4>
+          <div class="form-sub">
+            <form>
+              <input type="email" placeholder="Digite o seu e-mail" required>
+              <button>inscrever-se</button>
+            </form>
+          </div>
+          <div class="old">
+            <h5> Old Fashioned </h5>
+            <h7> Estar na moda é se sentir bem na própria pele.</h7>
+          </div>
+          <!--end footer col-->
+        </div>
+        <div class="ajuda">
+          <h6 style="margin-top: 10% ;"> All rights reserved </h6>
+          <div><a class="jesus" href="" class="suporte">
+              <h6>Ajuda e suporte</h6><img height="30px" src="iconsfooter/ajuda.png" alt="">
+            </a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/4ac5c9f100.js" crossorigin="anonymous"></script>
+  <script src="registro.js" defer></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</body>
+
 </html>

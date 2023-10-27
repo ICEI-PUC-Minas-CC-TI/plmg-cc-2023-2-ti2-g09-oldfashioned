@@ -88,6 +88,31 @@ public class UsuarioDAO extends DAO{
 		return usuario;
 	}
 
+	public Usuario getUsuarioByUsername(String username){
+		Usuario usuario = null;
+		try {
+			Statement st = conexao.createStatement();
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE username = '" + username + "'");
+			if(rs.next()){
+				usuario = new Usuario(
+					rs.getInt("id"),
+					rs.getString("username"),
+					rs.getString("nome"),
+					rs.getString("email"),
+					rs.getInt("idade"),
+					rs.getString("genero"),
+					rs.getString("foto"),
+					rs.getString("senha"),
+					rs.getString("produtos_curtidos")
+				);
+			}
+			st.close();
+		} catch (SQLException u) {
+			throw new RuntimeException(u);
+		}
+		return usuario;
+	}
+
 	public Usuario[] list(){
 		Usuario[] usuarios = null;
 		try {

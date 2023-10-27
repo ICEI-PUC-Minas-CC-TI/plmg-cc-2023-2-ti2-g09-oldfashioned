@@ -21,41 +21,41 @@ if (localStorage.getItem('userLogado')) {
 
 }
 
-inputEl.addEventListener('change' , () => {
-// Listens for new input file
+inputEl.addEventListener('change', () => {
+  // Listens for new input file
 
-    const file = inputEl.files[0]; 
-    // Gets file from input element
+  const file = inputEl.files[0];
+  // Gets file from input element
 
-    const fr = new FileReader();
-    // Creates new FileReader object
+  const fr = new FileReader();
+  // Creates new FileReader object
 
-    fr.readAsDataURL(file);
-    // Set FileReader to output data as URL string
+  fr.readAsDataURL(file);
+  // Set FileReader to output data as URL string
 
-    fr.addEventListener('load', () => {
-        // Waits for file reading to be complete
+  fr.addEventListener('load', () => {
+    // Waits for file reading to be complete
 
-        const url = fr.result
-        // Save result
-        
-        const img = new Image();
-        img.src = url;
+    const url = fr.result
+    // Save result
+
+    const img = new Image();
+    img.src = url;
 
 
-    })
+  })
 
 })
 
-inputEl.addEventListener('change' , () => {
-  const file = inputEl.files[0]; 
+inputEl.addEventListener('change', () => {
+  const file = inputEl.files[0];
   const fr = new FileReader();
   fr.readAsDataURL(file);
 
   fr.addEventListener('load', () => {
-      const url = fr.result
-      localStorage.setItem('image', url);
-      // Saves image to localStorage
+    const url = fr.result
+    localStorage.setItem('image', url);
+    // Saves image to localStorage
   })
 });
 
@@ -87,7 +87,7 @@ let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
 nome.addEventListener('keyup', () => {
-  if(nome.value.length <= 2){
+  if (nome.value.length <= 2) {
     labelNome.setAttribute('style', 'color: red')
     labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
     nome.setAttribute('style', 'border-color: red')
@@ -102,7 +102,7 @@ nome.addEventListener('keyup', () => {
 
 
 usuario.addEventListener('keyup', () => {
-  if(usuario.value.length <= 4){
+  if (usuario.value.length <= 4) {
     labelUsuario.setAttribute('style', 'color: red')
     labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
     usuario.setAttribute('style', 'border-color: red')
@@ -116,7 +116,7 @@ usuario.addEventListener('keyup', () => {
 })
 
 senha.addEventListener('keyup', () => {
-  if(senha.value.length <= 5){
+  if (senha.value.length <= 5) {
     labelSenha.setAttribute('style', 'color: red')
     labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
     senha.setAttribute('style', 'border-color: red')
@@ -130,7 +130,7 @@ senha.addEventListener('keyup', () => {
 })
 
 confirmSenha.addEventListener('keyup', () => {
-  if(senha.value != confirmSenha.value){
+  if (senha.value != confirmSenha.value) {
     labelConfirmSenha.setAttribute('style', 'color: red')
     labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não conferem'
     confirmSenha.setAttribute('style', 'border-color: red')
@@ -143,44 +143,44 @@ confirmSenha.addEventListener('keyup', () => {
   }
 })
 
-function cadastrar(){
-  if(validNome && validUsuario && validSenha && validConfirmSenha){
+function cadastrar() {
+  if (validNome && validUsuario && validSenha && validConfirmSenha) {
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
-    
+
     listaUser.push(
-    {
-      nomeCad: nome.value,
-      userCad: usuario.value,
-      senhaCad: senha.value,
-      emailCad: email.value,
-      idadeCad: idade.value,
-      descCad: descricao.value,
-      generoCad: genero.value,
-    }
+      {
+        nomeCad: nome.value,
+        userCad: usuario.value,
+        senhaCad: senha.value,
+        emailCad: email.value,
+        idadeCad: idade.value,
+        descCad: descricao.value,
+        generoCad: genero.value,
+      }
     )
-    
+
     localStorage.setItem('listaUser', JSON.stringify(listaUser))
     // Obtém o usuário recém-cadastrado
-let novoUsuario = listaUser.find(u => u.userCad === usuario.value);
+    let novoUsuario = listaUser.find(u => u.userCad === usuario.value);
 
-// Verifica se o usuário foi encontrado
-if (novoUsuario) {
-  novoUsuario.pastas = []; // Cria a propriedade "pastas" para o usuário
-}
+    // Verifica se o usuário foi encontrado
+    if (novoUsuario) {
+      novoUsuario.pastas = []; // Cria a propriedade "pastas" para o usuário
+    }
 
-localStorage.setItem('listaUser', JSON.stringify(listaUser));
-    
-   
+    localStorage.setItem('listaUser', JSON.stringify(listaUser));
+
+
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
     msgError.setAttribute('style', 'display: none')
     msgError.innerHTML = ''
-    
-    setTimeout(()=>{
-        window.location.href = '../login/login.html'
+
+    setTimeout(() => {
+      //window.location.href = '../login/login.html'
     }, 3000)
-  
-    
+
+
   } else {
     msgError.setAttribute('style', 'display: block')
     msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
@@ -189,24 +189,84 @@ localStorage.setItem('listaUser', JSON.stringify(listaUser));
   }
 }
 
-btn.addEventListener('click', ()=>{
+btn.addEventListener('click', () => {
   let inputSenha = document.querySelector('#senha')
-  
-  if(inputSenha.getAttribute('type') == 'password'){
+
+  if (inputSenha.getAttribute('type') == 'password') {
     inputSenha.setAttribute('type', 'text')
   } else {
     inputSenha.setAttribute('type', 'password')
   }
 })
 
-btnConfirm.addEventListener('click', ()=>{
+btnConfirm.addEventListener('click', () => {
   let inputConfirmSenha = document.querySelector('#confirmSenha')
-  
-  if(inputConfirmSenha.getAttribute('type') == 'password'){
+
+  if (inputConfirmSenha.getAttribute('type') == 'password') {
     inputConfirmSenha.setAttribute('type', 'text')
   } else {
     inputConfirmSenha.setAttribute('type', 'password')
   }
 })
 
+function cadastrarBD() {
+  var username = document.getElementById('usuario').value;
+  var nome = document.getElementById('nome').value;
+  var email = document.getElementById('email').value;
+  var senha = document.getElementById('senha').value;
+  var confirmSenha = document.getElementById('confirmSenha').value;
+  var idade = document.getElementById('idade').value;
+  var genero = document.getElementById('genero').value;
 
+  if (senha != confirmSenha) {
+    alert("As senhas não conferem!");
+    return;
+  }
+
+// Verificando se o usuário já existe
+var usernameBD = {
+  username: username
+};
+
+var array = [];
+
+var usuario = {
+  username: username,
+  nome: nome,
+  email: email,
+  senha: senha,
+  idade: idade,
+  genero: genero
+};
+
+axios.get("http://localhost:6789/usuario/list")
+  .then(response => {
+    array = response.data;
+    console.log(username);
+
+    // Use uma variável para rastrear se o usuário existe
+    let userExists = false;
+
+    array.forEach(element => {
+      if (element.username === username) {
+        console.log("Usuário já existe!");
+        userExists = true;
+      }
+    });
+
+    // Verifique se o usuário não existe antes de inseri-lo
+    if (!userExists) {
+      axios.post("http://localhost:6789/usuario/insert", usuario)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+
+  })
+  .catch(error => {
+    console.log(error);
+  });
+}

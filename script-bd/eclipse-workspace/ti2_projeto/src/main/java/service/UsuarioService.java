@@ -78,6 +78,24 @@ public class UsuarioService {
 		}
 	}
 
+	public String getUsuarioByUsername(Request request, Response response){
+		String str = request.body();
+
+		Gson gson = new Gson();
+		Usuario usuario = gson.fromJson(str, Usuario.class);
+
+		
+		usuario = usuarioDAO.getUsuarioByUsername(usuario.getUsername());
+		if(usuario == null){
+			response.status(404);
+			return "Usuário não encontrado!";
+		}else{
+			response.status(202);
+			return gson.toJson(usuario);
+		}
+		
+	}
+
 	public String list(Request request, Response response){
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 

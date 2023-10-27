@@ -1,3 +1,37 @@
+/* axios.get("http://localhost:6789/usuario/list")
+.then(response => {
+  console.log(response.data);
+})
+.catch(error => {
+  console.log(error);
+}); */
+
+// var usuario = {
+//   username: "brdsa",
+//   nome: "Fabio Antonio",
+//   email: "fabio@gmail.com",
+//   idade: 18,
+//   genero: "Masculino",
+//   foto: "http://exemplo.com/caminho_para_foto",
+//   senha: "fabio123",
+//   produtosCurtidos: "12,32,33"
+// };
+
+// axios.post("http://localhost:6789/usuario/insert", usuario).then(response => {
+//     console.log(response.data);
+// }).catch(error => {
+//     console.log(error);
+// });
+
+
+
+
+
+
+
+
+
+
 
 if (localStorage.getItem('userLogado')) {
   var userValid = JSON.parse(localStorage.getItem('userLogado'));
