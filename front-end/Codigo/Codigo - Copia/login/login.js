@@ -62,7 +62,8 @@ function entrar(){
   })
 
   if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = '/Codigo/meuperfil/perfil.html'
+    
+    window.location.href = '../meuperfil/perfil.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
@@ -82,4 +83,41 @@ function entrar(){
 }
 
 localStorage.setItem('userValid', JSON.stringify(userValid))
+
+function entrarBD() {
+  var username = document.querySelector('#usuario').value; 
+  var senha = document.querySelector('#senha').value; 
+
+  var usernameBD = {
+    username: username,
+    senha: senha
+  };
+
+  var array = [];
+
+  var usuario = {
+    username: username,
+    senha: senha
+  };
+
+  axios.get("http://localhost:6789/usuario/list")
+    .then(response => {
+      array = response.data;
+      console.log(username);
+
+      // Use uma variável para rastrear se o usuário existe
+      let userExists = false;
+
+      array.forEach(element => {
+        if (element.username === username && element.senha === senha) {
+          console.log("Usuário logado!");
+          userExists = true;
+        }
+      });
+
+      if (!userExists) {
+        console.log("Usuário não existe!");
+      }
+    });
+}
 

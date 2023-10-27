@@ -50,7 +50,7 @@
           <label for="password" id="senhaLabel" class="titleinfo">Senha</label>
           <input type="password" name="password" class="info" id="senha"/>
           <div class="justify-center">
-            <button onclick="entrar()" class="botaoentrar">Entrar</button>
+            <button onclick="entrar(); entrarBD();" class="botaoentrar">Entrar</button>
           </div>
   
           <div class="justify-center">
@@ -123,6 +123,7 @@
       
 
   <script src="login.js" defer></script>
-  
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
   </body>
 </html>
