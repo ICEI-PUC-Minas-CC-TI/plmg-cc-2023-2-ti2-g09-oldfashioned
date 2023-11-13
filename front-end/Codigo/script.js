@@ -36,21 +36,6 @@
 if (localStorage.getItem('userLogado')) {
   var userValid = JSON.parse(localStorage.getItem('userLogado'));
 
-  // Criar o ícone do perfil
-  var novoLink = document.createElement("a");
-  novoLink.setAttribute("href", "meuperfil/perfil.html");
-  var perfilIcon = document.createElement("img");
-  const url = localStorage.getItem('image');
-  const img = new Image();
-  img.classList.add("fotodperfil");
-  img.src = url;
-  novoLink.appendChild(img);
-
-  // Adicionar o ícone do perfil ao elemento HTML desejado
-  var perfilIconContainer = document.getElementById("rightsidemenu");
-  perfilIconContainer.appendChild(novoLink);
-
-
 }
 
 const search = () => {
@@ -124,7 +109,7 @@ const search = () => {
           gender: 'feminino',
           qty: 1
       },
-    
+
       {
           id: 6,
           name: "Vestido Vinho com Fenda Casual",
@@ -138,7 +123,7 @@ const search = () => {
           gender: 'feminino',
           qty: 1
       },
-    
+
     {
       id: 7,
       name: "Vestido Florido de Verão",
@@ -152,7 +137,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 8,
       name: "Calça Larga Nude",
@@ -166,7 +151,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 9,
       name: "Calça Estampada Pernas Largas",
@@ -180,7 +165,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 10,
       name: "Blusa Bordada",
@@ -194,7 +179,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 11,
       name: "Blusa Verde Coração",
@@ -208,7 +193,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 12,
       name: "Blusa Três Cores",
@@ -222,7 +207,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 13,
       name: "Blusa Preta Casual",
@@ -236,7 +221,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 14,
       name: "Blusa Gola V",
@@ -250,7 +235,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 15,
       name: "Jaqueta Branca",
@@ -264,7 +249,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 16,
       name: "Blazer Branco",
@@ -278,7 +263,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 17,
       name: "Jaqueta Xadrez Peluciada",
@@ -292,7 +277,7 @@ const search = () => {
       gender: 'feminino',
       qty: 1
     },
-    
+
     {
       id: 18,
       name: "Camisa Social",
@@ -306,7 +291,7 @@ const search = () => {
       gender: 'masculino',
       qty: 1
     },
-    
+
     {
       id: 19,
       name: "Sueter Verde",
@@ -320,7 +305,7 @@ const search = () => {
       gender: 'masculino',
       qty: 1
     },
-    
+
     {
       id: 20,
       name: "Calça Estilo Jeans Formal",
@@ -334,7 +319,7 @@ const search = () => {
       gender: 'masculino',
       qty: 1
     },
-    
+
     {
       id: 21,
       name: "Calça Preta Casual",
@@ -348,7 +333,7 @@ const search = () => {
       gender: 'masculino',
       qty: 1
     },
-    
+
     {
       id: 22,
       name: "Blusa Preta Social",
@@ -385,8 +370,8 @@ const search = () => {
             let productPriceHeading = document.createElement("h3");
             productPriceHeading.textContent = "R$" + ITEMS[i].price;
 
-            
-    
+
+
             // Verificar se o ID do produto está presente no localStorage e adicionar a classe "like2" se necessário
 
 
@@ -396,8 +381,8 @@ const search = () => {
             vejamais.innerText = "Veja Mais";
             vejamais.setAttribute("onclick", "redirectToProductPage('" + ITEMS[i].id + "')");
 
-            
-            
+
+
 
             productDetails.appendChild(productNameHeading);
             productDetails.appendChild(productPriceHeading);
@@ -410,10 +395,10 @@ const search = () => {
 
             storeitems.appendChild(productElement);
 
-            
+
         // Adicione um ouvinte de evento para o botão de like dentro do loop
-        
-          
+
+
         }
     }
 }
@@ -506,20 +491,20 @@ ITEMS = [
       gender: 'feminino',
       qty: 1
   },
-  
-  
+
+
 
 ];
 
 for (let i of ITEMS) {
   // Create Card
-  
+
   let card = document.createElement("div");
 
   // Set classes based on categories
   card.classList.add("card");
   for (let category of i.category) {
-      card.classList.add(category.toLowerCase()); 
+      card.classList.add(category.toLowerCase());
   }
 
   // Image div
@@ -559,7 +544,7 @@ for (let i of ITEMS) {
   button.innerText = "Veja Mais";
 
   button.setAttribute("onclick", "redirectToProductPage(" + i.id + ")");
-  //button.setAttribute("onclick", "window.location.href='product.html?id=" + i.id + "'"); 
+  //button.setAttribute("onclick", "window.location.href='product.html?id=" + i.id + "'");
   //button.setAttribute("onclick", "window.location.href='product.html?id=" + ITEMS[index].id + "'");
 
 
@@ -567,7 +552,7 @@ for (let i of ITEMS) {
     window.location.href = 'busca_de_produto/product.html?id=' + productId;
 
   }
-  
+
   card.appendChild(button);
 
   //Add Like button
@@ -586,7 +571,7 @@ for (let i of ITEMS) {
 
 
 
-  
+
   // Função para selecionar a pasta e redirecionar para a página favoritos.html
   function selecionarPasta(idPasta) {
     localStorage.setItem('pastaSelecionada', idPasta);
@@ -601,7 +586,7 @@ function redirecionar() {
 document.addEventListener('DOMContentLoaded', function() {
     var favoritos = JSON.parse(localStorage.getItem('favorito')) || [];
 
-   
+
 
  //Salvar nos favoritos
 document.querySelectorAll(".like").forEach((likeButton, index) => {
@@ -609,10 +594,10 @@ document.querySelectorAll(".like").forEach((likeButton, index) => {
     const favoritos = JSON.parse(localStorage.getItem('favorito')) || [];
     if (favoritos.includes(itemId)) {
       likeButton.classList.add("like2");}
-      
+
       likeButton.onclick = function () {
-          
-  
+
+
           if (favoritos.includes(itemId)) {
               likeButton.classList.add("like2");
               alert('Este item já está nos favoritos!');
@@ -622,7 +607,7 @@ document.querySelectorAll(".like").forEach((likeButton, index) => {
               //Change button color
               likeButton.classList.add("like2");
               alert('Produto salvo nos favoritos!');
-              
+
           }
       };
   });
