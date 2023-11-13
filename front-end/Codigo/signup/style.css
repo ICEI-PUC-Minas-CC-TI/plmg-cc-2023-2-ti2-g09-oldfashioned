@@ -279,24 +279,7 @@ footer {
   color: black;
   border: 1px solid beige;
 }
-.face {
-  background-image: url(images/facebook.png);
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.tt {
-  background-image: url(images/twitter.png);
-  background-size: 25px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.insta {
-  background-image: url(images/instagram.png);
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+
 .footer-col .medias-socias a i {
   margin-left: 20%;
   font-size: 20px;

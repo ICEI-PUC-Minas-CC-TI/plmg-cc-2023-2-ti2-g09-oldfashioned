@@ -45,7 +45,7 @@
       </header>
       <main class="container">
         <div class="left" id="left">
-            <h1>Sua conta</h1>
+            <h1></h1>
             <div id="fotoperfil"></div>
             <button id="editarBtn">Editar</button>
             <div id="btnSalvarContainer"></div>
@@ -162,10 +162,10 @@
             document.getElementById('usuarionome');textContent = 'Nenhum nome armazenado';
         }
         
-        const url = localStorage.getItem('image');
+        const url = "/front-end/Codigo/images/foto_user.jpg";
 // Get data URL from localStorage
 var div = document.getElementById('fotoperfil');
-const img = new Image();
+const img = new Image(); 
 img.src = url;
 div.appendChild(img);
 
