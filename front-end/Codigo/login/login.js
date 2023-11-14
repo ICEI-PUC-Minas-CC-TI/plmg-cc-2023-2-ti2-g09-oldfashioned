@@ -1,3 +1,11 @@
+//Verifica se o usuario esta logado
+var idUserLogado = localStorage.getItem('idUserLogado');
+if (idUserLogado != null) {
+    //voltar para a pagina de login
+    window.location.href = "/front-end/Codigo/index.html"
+    alert("Você já está logado!");
+}
+
 //Conexão com o banco de dados
 
 function entrarBD() {

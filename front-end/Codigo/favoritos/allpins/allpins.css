@@ -22,6 +22,7 @@ header{
 .left-side-menu{
     display:flex;
     gap:50px;
+    margin-top: 25px;
 }
 
 .right-side-menu{

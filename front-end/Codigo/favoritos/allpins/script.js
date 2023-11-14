@@ -1,5 +1,9 @@
-if (localStorage.getItem('userLogado')) {
-  var userValid = JSON.parse(localStorage.getItem('userLogado'));
+//Verifica se o usuario esta logado
+var idUserLogado = localStorage.getItem('idUserLogado');
+if (idUserLogado == null) {
+    //voltar para a pagina de login
+    window.location.href = "/front-end/Codigo/login/login.html"
+    alert("Você precisa estar logado para acessar essa página!");
 }
 
 ITEMS = [

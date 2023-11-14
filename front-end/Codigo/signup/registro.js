@@ -1,3 +1,11 @@
+//Verifica se o usuario esta logado
+var idUserLogado = localStorage.getItem('idUserLogado');
+if (idUserLogado != null) {
+    //voltar para a pagina de login
+    window.location.href = "/front-end/Codigo/index.html"
+    alert("Você já está logado!");
+}
+
 const inputEl = document.getElementById('file-input-element');
 // Gets input element
 

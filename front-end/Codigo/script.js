@@ -30,9 +30,6 @@
 
 
 
-
-
-
 if (localStorage.getItem('userLogado')) {
   var userValid = JSON.parse(localStorage.getItem('userLogado'));
 
@@ -627,11 +624,6 @@ function atualizarQuantidadeFavoritos() {
 }
 
 
-
-
-
-// Adiciona evento de clique no botão de visualizar favoritos
-document.getElementById("btnFavoritos").addEventListener("click", redirecionarParaPaginaFavoritos);
 
 
   });
