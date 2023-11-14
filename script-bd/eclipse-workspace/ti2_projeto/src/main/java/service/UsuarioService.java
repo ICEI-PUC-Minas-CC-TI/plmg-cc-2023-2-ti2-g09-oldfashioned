@@ -1,8 +1,5 @@
 package service;
 
-import java.util.Scanner;
-import java.io.File;
-import java.util.List;
 import dao.UsuarioDAO;
 import model.Usuario;
 import spark.Request;

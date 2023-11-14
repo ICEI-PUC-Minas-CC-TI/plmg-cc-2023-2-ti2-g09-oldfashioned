@@ -375,6 +375,9 @@ footer {
 .soph {
   margin-left: 8%;
 }
+.cadastrese{
+  color: black;
+}
 @media (max-width: 1024px) {
   *{
       margin: 1%;

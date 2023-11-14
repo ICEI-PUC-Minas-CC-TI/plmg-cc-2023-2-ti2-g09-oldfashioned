@@ -1,11 +1,7 @@
 package service;
 
-import java.util.Scanner;
-import java.io.File;
-import java.util.List;
 import dao.ProdutoDAO;
 import model.Produto;
-import model.Usuario;
 import spark.Request;
 import spark.Response;
 import com.google.gson.Gson;

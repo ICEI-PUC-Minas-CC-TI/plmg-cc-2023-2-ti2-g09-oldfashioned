@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import model.Produto;
-import model.Usuario;
 
 public class ProdutoDAO extends DAO{
     public ProdutoDAO() {
