@@ -62,7 +62,7 @@ public class UsuarioService {
 	//metodo get que retorna um json com o usuario
 	public String get(Request request, Response response){
 		String str = request.body();
-
+		System.out.println(str);
 		Gson gson = new Gson();
 		Usuario usuario = gson.fromJson(str, Usuario.class);
 
@@ -76,19 +76,18 @@ public class UsuarioService {
 	}
 
 	public String getUsuarioByUsername(Request request, Response response){
-		String str = request.body();
-
-		Gson gson = new Gson();
-		Usuario usuario = gson.fromJson(str, Usuario.class);
-
+		String id = request.params(":id");
 		
-		usuario = usuarioDAO.getUsuarioByUsername(usuario.getUsername());
+		Usuario usuario = usuarioDAO.getUsuarioByUsername(Integer.parseInt(id));
+
 		if(usuario == null){
-			response.status(404);
-			return "Usuário não encontrado!";
+			response.status(404); // 404 Not found
+			return "{\"message\": \"Usuario não encontrada\"}";
 		}else{
-			response.status(202);
-			return gson.toJson(usuario);
+			response.header("Content-Type", "application/json");
+			response.header("Content-Encoding", "UTF-8");
+
+			return new Gson().toJson(usuario);
 		}
 		
 	}

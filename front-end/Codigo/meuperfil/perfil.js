@@ -38,24 +38,24 @@
 
 //Carrega os dados quando a pagina for carregada
 window.onload = function () {
-  carregarDados();
-};
-
-function carregarDados() {
-    var id = localStorage.getItem('idUserLogado');
-    
-    const userId = { 
-        "id": id
-    }
-    console.log(userId);
-    //Obtendo o usuario logado
-    axios.get("http://localhost:6789/usuario/get" , userId)
-    .then(response => {
-        console.log(response.data);
-      var array = response.data;
-      document.getElementById('nome').value = array.nome;
-      document.getElementById('email').value = array.email;
-      document.getElementById('username').value = array.username;
-      document.getElementById('senha').value = array.senha;
-    });
-}
+    carregarDados();
+  };
+  
+  function carregarDados() {
+      var id = localStorage.getItem('idUserLogado');
+      console.log(id);
+  
+      //Obtendo o usuario logado
+      axios.get(`http://localhost:6789/usuario/get/username/${id}`)
+      .then(response => {
+          console.log(response.data);
+        // var array = response.data;
+        // document.getElementById('nome').value = array.nome;
+        // document.getElementById('email').value = array.email;
+        // document.getElementById('username').value = array.username;
+        // document.getElementById('senha').value = array.senha;
+      }).catch(error => {
+          console.log(error);
+        })
+      ;
+  }

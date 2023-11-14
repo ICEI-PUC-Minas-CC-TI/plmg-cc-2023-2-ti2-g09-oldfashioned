@@ -41,7 +41,7 @@ public class Aplicacao {
 
         get("/usuario/get", (request, response) -> usuarioService.get(request, response));
         
-        get("/usuario/get/username", (request, response) -> usuarioService.getUsuarioByUsername(request, response));
+        get("/usuario/get/username/:id", (request, response) -> usuarioService.getUsuarioByUsername(request, response));
         
         post("/usuario/update", (request, response) -> usuarioService.update(request, response));
            

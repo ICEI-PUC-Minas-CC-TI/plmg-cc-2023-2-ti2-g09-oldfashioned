@@ -88,11 +88,11 @@ public class UsuarioDAO extends DAO{
 		return usuario;
 	}
 
-	public Usuario getUsuarioByUsername(String username){
+	public Usuario getUsuarioByUsername(int id){
 		Usuario usuario = null;
 		try {
 			Statement st = conexao.createStatement();
-			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE username = '" + username + "'");
+			ResultSet rs = st.executeQuery("SELECT * FROM usuario WHERE id = '" + id + "'");
 			if(rs.next()){
 				usuario = new Usuario(
 					rs.getInt("id"),
