@@ -457,17 +457,31 @@ nav ul li {
   height: 280px;
 }
 
-.product{
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding-bottom: 15px;
-
+#products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; /* Espaçamento entre os produtos */
 }
 
+.product {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Adaptação para telas menores, como dispositivos móveis */
+@media (max-width: 600px) {
+  #products {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
 .product img{
-  width: 70px;
-  height: 70px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 5px;
 
