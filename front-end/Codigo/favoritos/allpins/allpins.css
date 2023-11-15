@@ -64,6 +64,24 @@ header{
     font-size: 15px;
     font-weight: 700;
 }
+.vejamais{   
+    padding: 3px 7px;
+    background-color: #d17878;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none; 
+    border-radius: 8px;
+    height: 40px;
+    font-size: 12px;
+    margin-right: 3px;
+    margin-bottom: 3px;;
+}
+.remover{
+    height: 30px;
+    margin-top: 5px;
+}
+
 nav ul li{
     display:inline-block;
     margin-right: 30px;

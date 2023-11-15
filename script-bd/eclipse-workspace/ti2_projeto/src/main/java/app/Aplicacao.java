@@ -42,7 +42,9 @@ public class Aplicacao {
         get("/usuario/get", (request, response) -> usuarioService.get(request, response));
         
         get("/usuario/get/username/:id", (request, response) -> usuarioService.getUsuarioByUsername(request, response));
-        
+
+        get("/usuario/get/produtosCurtidos/:id", (request, response) -> usuarioService.getProdutosCurtidos(request, response));
+
         post("/usuario/update", (request, response) -> usuarioService.update(request, response));
            
         delete("/usuario/delete", (request, response) -> usuarioService.delete(request, response));

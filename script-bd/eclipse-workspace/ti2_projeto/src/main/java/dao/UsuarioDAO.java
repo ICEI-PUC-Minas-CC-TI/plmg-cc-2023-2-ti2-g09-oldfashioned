@@ -113,6 +113,21 @@ public class UsuarioDAO extends DAO{
 		return usuario;
 	}
 
+	public String getProdutosCurtidos(int id){
+		String produtosCurtidos = null;
+		try {
+			Statement st = conexao.createStatement();
+			ResultSet rs = st.executeQuery("SELECT produtos_curtidos FROM usuario WHERE id = '" + id + "'");
+			if(rs.next()){
+				produtosCurtidos = rs.getString("produtos_curtidos");
+			}
+			st.close();
+		} catch (SQLException u) {
+			throw new RuntimeException(u);
+		}
+		return produtosCurtidos;
+	}
+
 	public Usuario[] list(){
 		Usuario[] usuarios = null;
 		try {

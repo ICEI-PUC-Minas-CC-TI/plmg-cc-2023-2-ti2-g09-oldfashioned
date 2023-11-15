@@ -92,6 +92,22 @@ public class UsuarioService {
 		
 	}
 
+	public String getProdutosCurtidos(Request request, Response response){
+		String id = request.params(":id");
+
+		String produtosCurtidos = usuarioDAO.getProdutosCurtidos(Integer.parseInt(id));
+
+		if(produtosCurtidos == null){
+			response.status(404); // 404 Not found
+			return "{\"message\": \"Usuario não encontrada\"}";
+		}else{
+			response.header("Content-Type", "application/json");
+			response.header("Content-Encoding", "UTF-8");
+
+			return produtosCurtidos;
+		}
+	}
+
 	public String list(Request request, Response response){
 		UsuarioDAO usuarioDAO = new UsuarioDAO();
 
