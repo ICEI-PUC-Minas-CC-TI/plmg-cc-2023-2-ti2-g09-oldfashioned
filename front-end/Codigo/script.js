@@ -36,6 +36,8 @@ const search = () => {
             let productNameHeading = document.createElement("h2");
             productNameHeading.textContent = productName;
 
+            let productId = ITEMS[i].produtoId;
+
             let productPriceHeading = document.createElement("h3");
             productPriceHeading.textContent = "R$" + ITEMS[i].preco;
 
@@ -43,7 +45,8 @@ const search = () => {
             vejamais.classList.add("button");
             vejamais.classList.add("vejamais");
             vejamais.innerText = "Veja Mais";
-            vejamais.setAttribute("onclick", "redirectToProductPage('" + ITEMS[i].nome + "')");
+            vejamais.setAttribute("onclick", "redirectToProductPage('" + productId + "')");
+
 
             productDetails.appendChild(productNameHeading);
             productDetails.appendChild(productPriceHeading);
@@ -59,8 +62,11 @@ const search = () => {
     }
 }
 
-function redirectToProductPage(productId) {
-    window.location.href = 'product.html?id=' + productId;
+function redirectToProductPage(produtoId) {
+    window.location.href = 'http://127.0.0.1:5500/front-end/Codigo/busca_de_produto/product.html?id=' + produtoId;
+
+    //preecher a página com os dados do produto
+    const product = ITEMS.find(item => item.id === productId);
 
 }
 
@@ -70,9 +76,14 @@ axios.get('http://localhost:6789/produto/list')
 .then(response => {
   ITEMS = response.data;
  
-  //inserindo os produtos na página (9 produtos)
-  for (let i = 0; i < 4; i++) {
-    console.log(ITEMS[i]);
+  //inserindo os produtos na página (4 produtos)
+  
+  //numero aleatorio para escolher os produtos (de 1 a 16)
+  var numeroAleatorio = Math.floor(Math.random() * 16) + 1;
+
+  for (let j = 0; j < 4; j++) {
+    let i = numeroAleatorio + j;
+    // console.log(ITEMS[i]);
     let productElement = document.createElement("div");
     productElement.className = "product";
 
@@ -89,11 +100,13 @@ axios.get('http://localhost:6789/produto/list')
     let productPriceHeading = document.createElement("h3");
     productPriceHeading.textContent = "R$" + ITEMS[i].preco;
 
+    let productId = ITEMS[i].produtoId;
+
     let vejamais = document.createElement("button");
     vejamais.classList.add("button");
     vejamais.classList.add("vejamais");
     vejamais.innerText = "Veja Mais";
-    vejamais.setAttribute("onclick", "redirectToProductPage('" + ITEMS[i].nome + "')");
+    vejamais.setAttribute("onclick", "redirectToProductPage('" + productId + "')");
 
     productDetails.appendChild(productNameHeading);
     productDetails.appendChild(productPriceHeading);
