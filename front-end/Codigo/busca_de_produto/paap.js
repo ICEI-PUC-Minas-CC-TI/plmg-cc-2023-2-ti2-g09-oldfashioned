@@ -3,6 +3,13 @@ if (localStorage.getItem('userLogado')) {
 
 }
 
+var idUserLogado = localStorage.getItem('idUserLogado');
+if (idUserLogado == null) {
+  //voltar para a pagina de login
+  window.location.href = "/front-end/Codigo/login/login.html"
+  alert("Você precisa estar logado para acessar essa página!");
+}
+
 window.onload = () => {
   let idParameter = new URLSearchParams(window.location.search);
   let identificador = idParameter.get('id');
@@ -13,13 +20,13 @@ function renderItems(id) {
   // Criando o array de produtos com os produtos do banco de dados
   var ITEMS;
   axios.get('http://localhost:6789/produto/list')
-  .then(response => {
-    ITEMS = response.data;
+    .then(response => {
+      ITEMS = response.data;
 
-    var item = ITEMS.find(item => item.produtoId == id);
+      var item = ITEMS.find(item => item.produtoId == id);
 
 
-    let data1 = `
+      let data1 = `
     <div class="select-image">
       <div class="product_name">
         <h4>Old Fashioned</h4>
@@ -39,8 +46,8 @@ function renderItems(id) {
       
     </div>
   `;
-  document.getElementById('item').innerHTML = data1;
-  });
+      document.getElementById('item').innerHTML = data1;
+    });
 }
 
 const button1 = document.querySelector('.buttonmulher');
@@ -53,28 +60,28 @@ const content3 = document.querySelector('.popup-content3');
 const closeButton = document.querySelector('.popup-close');
 
 button1.addEventListener('click', () => {
-    event.preventDefault();
-    popup.style.display = 'block';
-    content1.style.display = 'block';
+  event.preventDefault();
+  popup.style.display = 'block';
+  content1.style.display = 'block';
 })
 button2.addEventListener('click', () => {
-    event.preventDefault();
-    popup.style.display = 'block';
-    content2.style.display = 'block';
+  event.preventDefault();
+  popup.style.display = 'block';
+  content2.style.display = 'block';
 })
 button3.addEventListener('click', () => {
-    event.preventDefault();
-    popup.style.display = 'block';
-    content3.style.display = 'block';
+  event.preventDefault();
+  popup.style.display = 'block';
+  content3.style.display = 'block';
 })
 
 closeButton.addEventListener('click', () => {
-    event.preventDefault();
-    popup.style.display = 'none';
-    content1.style.display = 'none';
-    content2.style.display = 'none';
-    content3.style.display = 'none';
-    
+  event.preventDefault();
+  popup.style.display = 'none';
+  content1.style.display = 'none';
+  content2.style.display = 'none';
+  content3.style.display = 'none';
+
 })
 
 let itemsEL = document.querySelector('.items');
@@ -84,52 +91,120 @@ let subtotalPrice = document.getElementById('subtotal_price');
 let addtocart = document.querySelector('.button');
 
 
-let favorito = []
-
-
 
 //Salvar nos favoritos
-document.addEventListener('DOMContentLoaded', () => {
+var idUserLogado = localStorage.getItem('idUserLogado');
+console.log(idUserLogado);
+
+//Obtendo o usuario logado
+axios.get(`http://localhost:6789/usuario/get/username/${idUserLogado}`)
+  .then(response => {
+    var array = response.data;
+    var produtosCurtidos = array.produtosCurtidos;
+
     let idParameter = new URLSearchParams(window.location.search);
-    let itemId = parseInt(idParameter.get('id'));
-    const favoritos = JSON.parse(localStorage.getItem('favorito')) || [];
+    let itemId = (idParameter.get('id'));
+
     const button1 = document.querySelector('.heart_button');
     const button2 = document.querySelector('.heart_button2');
-  
-    if (favoritos.includes(itemId)) {
+
+    // Criando um array em que cada elemento é um produto curtido
+    var produtosCurtidosArray = produtosCurtidos.split(" ");
+
+    // Acessando cada elemento do array e verificando se o produto já está nos favoritos
+    var temId = false;
+    for (let i = 0; i < produtosCurtidosArray.length; i++) {
+      if (produtosCurtidosArray[i] == itemId) {
+        temId = true;
+      }
+    }
+
+    if (temId) {
       button1.style.display = 'none';
       button2.style.display = 'flex';
     } else {
       button1.style.display = 'flex';
       button2.style.display = 'none';
     }
-  
-    button1.onclick = function() {
-      if (favoritos.includes(itemId)) {
+
+
+    //Obtendo os dados do usuario
+    axios.get(`http://localhost:6789/usuario/get/username/${idUserLogado}`)
+    .then(response => {
+      var array = response.data;
+      var id = array.id;
+      var nome = array.nome;
+      var username = array.username;
+      var email = array.email;
+      var idade = array.idade;
+      var genero = array.genero;
+      var senha = array.senha;
+
+    button1.onclick = function () {
+      if (temId) {
         alert('Este item já está nos favoritos!');
       } else {
-        favoritos.push(itemId);
-        localStorage.setItem('favorito', JSON.stringify(favoritos));
+        produtosCurtidosArray.push(itemId);
+        var prods = "";
+        prods += produtosCurtidosArray[0];
+        for (let i = 1; i < produtosCurtidosArray.length; i++) {
+          const element = produtosCurtidosArray[i];
+          prods += " " + element;
+        }
         button1.style.display = 'none';
         button2.style.display = 'flex';
+        atualizarDados(id, nome, username, email, idade, genero, senha, prods);
         alert('Produto salvo nos favoritos!');
       }
     };
-  
-    button2.onclick = function() {
-      const index = favoritos.indexOf(itemId);
-      if (index > -1) {
-        favoritos.splice(index, 1);
-        localStorage.setItem('favorito', JSON.stringify(favoritos));
+
+    button2.onclick = function () {
+      if (temId) {
+        //remover o produto do array
+        for (let i = 0; i < produtosCurtidosArray.length; i++) {
+          if (produtosCurtidosArray[i] == itemId) {
+            //remover o produto do array
+            produtosCurtidosArray.splice(i, 1);
+            break;
+          }
+        }
         button1.style.display = 'flex';
         button2.style.display = 'none';
+        var prods = "";
+        prods += produtosCurtidosArray[0];
+        for (let i = 1; i < produtosCurtidosArray.length; i++) {
+          const element = produtosCurtidosArray[i];
+          prods += " " + element;
+        }
+        atualizarDados(id, nome, username, email, idade, genero, senha, prods);
         alert('Produto removido dos favoritos!');
+      } else {
+        alert('Este item não está nos favoritos!');
       }
     };
+
+    });
+
+    function atualizarDados(id, nome, username, email, idade, genero, senha, produtosCurtidos) {
+      //Atualizando os dados do usuario
+      axios.post("http://localhost:6789/usuario/update", {
+        id: id,
+        username: username,
+        nome: nome,
+        email: email,
+        idade: idade,
+        genero: genero,
+        senha: senha,
+        produtosCurtidos: produtosCurtidos
+      }).then(response => {
+        window.location.reload();
+      }).catch(error => {
+        console.log(error);
+      });
+    }
   });
-  
 
-var favoritos= JSON.parse(localStorage.getItem('favorito')) || [];
 
-  
+
+
 

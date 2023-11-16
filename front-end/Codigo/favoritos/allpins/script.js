@@ -49,6 +49,8 @@ axios.get(`http://localhost:6789/usuario/get/username/${id}`)
         }
 
         document.getElementById('items').innerHTML = data;
+
+        
       }).catch(error => {
         console.log(error);
       });
@@ -57,6 +59,15 @@ axios.get(`http://localhost:6789/usuario/get/username/${id}`)
   }).catch(error => {
     console.log(error);
   });
+
+function redirectToProductPage(produtoId) {
+    window.location.href = 'http://127.0.0.1:5500/front-end/Codigo/busca_de_produto/product.html?id=' + produtoId;
+
+    //preecher a página com os dados do produto
+    const product = ITEMS.find(item => item.id === productId);
+
+}
+
 
 function removeFavorito(idProduto) {
   //Obtendo o usuario logado
