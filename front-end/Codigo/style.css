@@ -436,6 +436,7 @@ nav ul li {
   margin-left: 2rem;
   margin-top: 2rem;
   font-size: 30px;
+  margin-bottom: 10px;
 }
 .items {
   display: grid;
@@ -459,10 +460,45 @@ nav ul li {
   height: 280px;
 }
 
-#products {
+#productss {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px; /* Espaçamento entre os produtos */
+}
+
+#productsrec{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; /* Espaçamento entre os produtos */
+  margin-bottom: 30px;
+}
+
+.recomendados{
+  margin-left: 2rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.buttonrec{
+  height: 30px;
+  width: 50px;
+}
+
+#productsrec2{
+  margin-left: 2rem;
+}
+
+#productsrec2 button{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 30px;
+  width: 50px;
+}
+
+.trendstitle{
+  margin-bottom: 20px;
 }
 
 .product {

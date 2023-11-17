@@ -7,11 +7,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="recomendacao.css">
+
 
     <link href="cstyle.css" rel="stylesheet" />
     <!--  <script src="caap.js" defer></script> -->
     <script defer src="cores.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="recomendacao.js"></script>
+
   </head>
   <body>
     
@@ -71,9 +75,38 @@
            </div>
       </div>
     </section>
+
+    <div id="container">
+      <h1 style="color: rgb(197, 63, 14);">Coloração pessoal - Old Fashioned</h1>
+      <h4>Selecione uma foto que esteja bem perto de seu rosto e cabelos. Dê preferência a fotos que não contém fundos muito coloridos.</h4>
+      <form id="azureForm">
+          <label for="imageFile">Escolha uma Imagem:</label>
+          <input class="input" type="file" accept="image/*" id="imageFile" required><br>
+
+          <button class="botao" type="button" onclick="analyzeImage()">Analisar Imagem</button>
+      </form>
+      <div class="conteudo">
+      
+      <div class="resultados">
+      <h2>Cor de Destaque:</h2>
+      <div id="predominantColors"></div>
+      <h2>Cores análogas:</h2>
+      <div id="analagousColors"></div>
+      </div>
+
+      <div class="resultados">
+          <h2>Imagem Carregada:</h2>
+          <div id="imageContainer">
+              <img id="uploadedImage" src="" alt="Imagem Carregada">
+          </div>
+      </div>
+
+      </div>
+  </div>
+    
       <div class="wrapper2">
         <div class="textwrapper2">
-        <h2>
+        <h2 style="margin-top: 30px;">
           Psicologia das Cores - O que cada cor representa e pode transmitir:
         </h2>
         <p>
@@ -159,5 +192,7 @@
         </div>
       </div>
     </div>
+
+
   </body>
 </html>

@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+img {
+    max-width: 100%;
+}
+.input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: coral;
+    border-style: solid;
+    border-width: 1.5px;
+}
+.botao{
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border-color: coral;
+    border-style: solid;
+    border-width: 1.5px;
+    background-color: coral;
+    color: white;
+    width: 150px;
+}
+.colorBox {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+.conteudo{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.resultados{
+    width: 60%;
+    border: 1px solid coral;
+    border-radius: 5px;
+    padding: 2rem;
+}
