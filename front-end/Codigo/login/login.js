@@ -6,8 +6,18 @@ if (idUserLogado != null) {
     alert("Você já está logado!");
 }
 
-//Conexão com o banco de dados
+// Função para calcular a hash MD5 de uma senha
+function calcularHashMD5(senha) {
+    return CryptoJS.MD5(senha).toString();
+}
 
+// Função para verificar se a senha inserida é igual à hash armazenada
+function verificarSenha(senhaDigitada, hashArmazenada) {
+    const hashSenhaDigitada = calcularHashMD5(senhaDigitada);
+    return hashSenhaDigitada === hashArmazenada;
+}
+
+//Conexão com o banco de dados
 function entrarBD() {
   var username = document.querySelector('#usuario').value; 
   var senha = document.querySelector('#senha').value; 
@@ -24,6 +34,7 @@ function entrarBD() {
     senha: senha
   };
 
+
   axios.get("http://localhost:6789/usuario/list")
     .then(response => {
       array = response.data;
@@ -32,7 +43,7 @@ function entrarBD() {
       localStorage.setItem('temUsuario', 'false');
 
       array.forEach(element => {
-        if (element.username === username && element.senha === senha) {
+        if (element.username === username && verificarSenha(senha,element.senha)) {
           localStorage.setItem('temUsuario', 'true');
           //setando o id na variavel userLogado
           localStorage.setItem('idUserLogado', JSON.stringify(element.id));
@@ -44,7 +55,7 @@ function entrarBD() {
       let temUsuario = localStorage.getItem('temUsuario');
       if (temUsuario === 'false') {
         alert("Usuário não existe!");
-        
+
       }
     });
 }
