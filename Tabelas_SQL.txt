@@ -1,0 +1,48 @@
+-- Table: public.usuario
+
+-- DROP TABLE IF EXISTS public.usuario;
+
+CREATE TABLE IF NOT EXISTS public.usuario
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    username text COLLATE pg_catalog."default",
+    nome text COLLATE pg_catalog."default",
+    email text COLLATE pg_catalog."default",
+    idade integer,
+    genero text COLLATE pg_catalog."default",
+    foto text COLLATE pg_catalog."default",
+    senha text COLLATE pg_catalog."default",
+    produtos_curtidos text COLLATE pg_catalog."default",
+    CONSTRAINT usuario_pkey PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.usuario
+    OWNER to postgres;
+------------------------------------------------------------------------------------------------------
+
+-- Table: public.produto
+
+-- DROP TABLE IF EXISTS public.produto;
+
+CREATE TABLE IF NOT EXISTS public.produto
+(
+    produto_id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    nome text COLLATE pg_catalog."default",
+    descricao text COLLATE pg_catalog."default",
+    imagem text COLLATE pg_catalog."default",
+    preco numeric(10,2),
+    quantidade integer,
+    link_site text COLLATE pg_catalog."default",
+    link_medidas text COLLATE pg_catalog."default",
+    cor text COLLATE pg_catalog."default",
+    tamanho text COLLATE pg_catalog."default",
+    evento text COLLATE pg_catalog."default",
+    CONSTRAINT produto_pkey PRIMARY KEY (produto_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.produto
+    OWNER to postgres;

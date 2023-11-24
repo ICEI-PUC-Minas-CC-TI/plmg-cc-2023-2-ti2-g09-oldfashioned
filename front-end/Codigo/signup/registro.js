@@ -46,7 +46,7 @@ let msgSuccess = document.querySelector('#msgSuccess')
 
 nome.addEventListener('keyup', () => {
   if (nome.value.length <= 2) {
-    labelNome.setAttribute('style', 'font-size: 12px')
+    labelNome.setAttribute('style', 'font-size: 13px')
     labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
     nome.setAttribute('style', 'border-color: red')
     
@@ -62,7 +62,7 @@ nome.addEventListener('keyup', () => {
 
 usuario.addEventListener('keyup', () => {
   if (usuario.value.length <= 4) {
-    labelUsuario.setAttribute('style', 'font-size: 12px')
+    labelUsuario.setAttribute('style', 'font-size: 13px')
     labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
     usuario.setAttribute('style', 'border-color: red')
     validUsuario = false
@@ -76,7 +76,7 @@ usuario.addEventListener('keyup', () => {
 
 senha.addEventListener('keyup', () => {
   if (senha.value.length <= 5) {
-    labelSenha.setAttribute('style', 'font-size: 12px')
+    labelSenha.setAttribute('style', 'font-size: 13px')
     labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
     senha.setAttribute('style', 'border-color: red')
     validSenha = false
@@ -90,7 +90,7 @@ senha.addEventListener('keyup', () => {
 
 confirmSenha.addEventListener('keyup', () => {
   if (senha.value != confirmSenha.value) {
-    labelConfirmSenha.setAttribute('style', 'font-size: 12px')
+    labelConfirmSenha.setAttribute('style', 'font-size: 13px')
     labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não conferem'
     confirmSenha.setAttribute('style', 'border-color: red')
     validConfirmSenha = false
@@ -152,6 +152,7 @@ axios.get("http://localhost:6789/usuario/list")
       axios.post("http://localhost:6789/usuario/insert", usuario)
         .then(response => {
           console.log(response.data);
+          window.location.href = '../login/login.html'
         })
         .catch(error => {
           console.log(error);

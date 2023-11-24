@@ -3,6 +3,7 @@ if (localStorage.getItem('userLogado')) {
 
 }
 
+//localStorage.clear();
 
 const search = () => {
     const searchbox = document.getElementById("search-item").value.toUpperCase();
