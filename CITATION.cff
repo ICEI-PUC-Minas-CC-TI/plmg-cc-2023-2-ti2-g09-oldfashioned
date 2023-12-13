@@ -1,34 +1,30 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title:  Fin Manage
+title:  Old Fashioned
 authors:
-  - family-names: Gomes de Brites
-    given-names: Guilherme
-  - family-names: Azeredo Coutinho Curi
-    given-names: João Lucas
-  - family-names: Madeira Carneiro Braga de Freitas
-    given-names: João
-  - family-names: Candian
-    given-names: Arthur
+  - family-names: Alkmim Barros
+    given-names: Lucas 
+  - family-names: Carraza Ventorim de Sousa
+    given-names: Sophia
+  - family-names: Câmara Xavier
+    given-names: Livia
+  - family-names: Caldeira Andrade
+    given-names: Fábio Antônio
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: do Val Machado
-    given-names: Max
+    family-names: Jerônimo de Almeida
+    given-names: Sandro
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: Mara Freitas Diniz
-    given-names: Luciana
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: da Costa Vieira Rezende
-    given-names: Josiane
+    family-names: Soares Gomes
+    given-names: Marco Paulo
 
 keywords:
-  - Controle Financeiro
-  - Financeiro
-  - Educação Financeira
-  - Investimento
-repository-code: https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-2023-2-ti2-g04-finmanager
+  - Idosos
+  - Moda
+  - Inclusão dos Idosos
+  - Sistema Inteligente
+repository-code: https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-2023-2-ti2-g09-oldfashioned
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2023-12-12
